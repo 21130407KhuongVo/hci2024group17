@@ -224,7 +224,9 @@
     <script>
         $(document).ready(function () {
 
-            let index = 0;
+            // Lấy giá trị index từ URL
+            let queryParams = getQueryParams();
+            let index = queryParams.index ? parseInt(queryParams.index) : -1;
 
             loadData()
             $('#togglePassword').on('click', function () {
@@ -267,6 +269,16 @@
                     $('button#btn_create').show()
                     $('button#btn_save').hide()
                 }
+            }
+
+            // Hàm lấy các tham số từ URL
+            function getQueryParams() {
+                let params = {};
+                window.location.search.substring(1).split("&").forEach(function (param) {
+                    let pair = param.split("=");
+                    params[pair[0]] = decodeURIComponent(pair[1]);
+                });
+                return params;
             }
         })
     </script>
