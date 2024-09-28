@@ -255,73 +255,71 @@
 
     <script>
         $(document).ready(function () {
-            let githubArr = ['21130407KhuongVo', 'nguyenthanhhoailinh', 'k-huunhan', 'VanToan1912', 'TriTran119'],
-                facebookArr = ['vo.kevin.777/', 'hoailinh.nguyenthanh.7', 'profile.php?id=100079054593761', 'profile.php?id=100026253393471', 'tri.tran.959'],
-                linkedlnArr = [],
-                imgs = ['NhatKhuong.jpg', 'HoaiLinh.jpg', 'HuuNhan.jpeg', 'VanToan.jpeg', 'loopy1.jpg'],
-                contexts = ['developer'],
-                names = ['Võ Nguyễn Nhật Khương', 'Nguyễn Thanh Hoài Linh', 'Khổng Hữu Nhân', 'Trần Văn Toàn', 'Trần Minh Trí'];
+            $.getJSON('information.json', function (data) {
 
-            uploadImage()
-            setName()
-            setContext()
-            setGithub()
-            setLinkedln()
-            setFacebook()
-            setHeader()
-            setFooter()
+                // Gọi các hàm để hiển thị thông tin từ JSON
+                uploadImage(data);
+                setName(data);
+                setContext(data);
+                setGithub(data);
+                setLinkedln(data);
+                setFacebook(data);
+                setHeader();
+                setFooter();
 
-            function setHeader(){
+            });
+
+            function setHeader() {
                 $('#navigation').load("header.html")
             }
 
-            function setFooter(){
+            function setFooter() {
                 $('#footer').load("footer.html")
             }
 
-            function uploadImage() {
+            function uploadImage(data) {
                 console.log('uploadImage() is calling')
-                $('div.card img').each(
-                    function (index, element) {
-                        $(element).attr('src', 'images/' + imgs[index])
-                    }
-                )
+                $('div.card img').each(function (index, element) {
+                    // Sử dụng dữ liệu từ JSON thay vì mảng cứng
+                    $(element).attr('src', 'images/' + data.users[index].avatar);
+                });
             }
 
-            function setName() {
+            function setName(data) {
                 console.log('setName() is calling')
                 $('div.card h5.card-title').each(function (index, element) {
-                    $(element).text(names[index])
-                })
+                    $(element).text(data.users[index].fullname);
+                });
             }
 
-            function setContext() {
+            function setContext(data) {
                 console.log('setContext() is calling')
                 $('div.card p.card-text').each(function (index, element) {
-                    $(element).text(contexts[0])
-                })
+                    $(element).text(data.users[index].context);
+                });
             }
 
-            function setGithub() {
+            function setGithub(data) {
                 console.log('setGithub() is calling')
                 $('a.github').each(function (index, element) {
-                    $(element).attr('href', $(element).attr('href') + githubArr[index])
-                })
+                    $(element).attr('href', $(element).attr('href') + data.users[index].github);
+                });
             }
 
-            function setLinkedln() {
+            function setLinkedln(data) {
                 console.log('setLinkedln() is calling')
-                $('a.linkedln').each(function (index, element) {
-                    $(element).attr('href', $(element).attr('href') + linkedlnArr[index])
-                })
+                $('a.linkedin').each(function (index, element) {
+                    $(element).attr('href', $(element).attr('href') + data.users[index].linkedin);
+                });
             }
 
-            function setFacebook() {
+            function setFacebook(data) {
                 console.log('setFacebook() is calling')
                 $('a.facebook').each(function (index, element) {
-                    $(element).attr('href', $(element).attr('href') + facebookArr[index])
-                })
+                    $(element).attr('href', $(element).attr('href') + data.users[index].facebook);
+                });
             }
+
         })        
     </script>
 

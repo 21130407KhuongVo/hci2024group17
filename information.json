@@ -12,7 +12,8 @@
             "role": "admin",
             "email": "21130407@st.hcmuaf.edu.vn",
             "password": "21052003",
-            "createAt": "2024-09-21"
+            "createAt": "2024-09-21",
+            "context":"developer"
         },
         {
             "id": 21130425,
@@ -26,7 +27,8 @@
             "role": "",
             "email": "",
             "password": "",
-            "createAt": ""
+            "createAt": "",
+            "context":"developer"
         },
         {
             "id": 21130459,
@@ -40,7 +42,8 @@
             "role": "",
             "email": "",
             "password": "",
-            "createAt": ""
+            "createAt": "",
+            "context":"developer"
         },
         {
             "id": 21130572,
@@ -54,7 +57,8 @@
             "role": "",
             "email": "",
             "password": "",
-            "createAt": ""
+            "createAt": "",
+            "context":"developer"
         },
         {
             "id": 23130348,
@@ -68,7 +72,8 @@
             "role": "",
             "email": "",
             "password": "",
-            "createAt": ""
+            "createAt": "",
+            "context":"developer"
         }
     ]
 }
