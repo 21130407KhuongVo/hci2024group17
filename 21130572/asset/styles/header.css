@@ -1,0 +1,45 @@
+/* Header */
+.header {
+    background-color: #191C1FCC;
+    padding: 30px 0;
+    text-align: center;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; */
+}
+
+.home{
+    position: absolute;
+    top: 14px;
+    left: 80px;
+}
+
+.header .nav ul {
+    display: inline-block;
+}
+
+.header .nav li {
+    display: inline;
+    padding: 5px 0;
+    margin: 0 30px;
+}
+
+.header .nav a {
+    font-size: larger;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.header .nav a:hover {
+    color: #ffc85a;
+    transition: 0.3s;
+}
+
+.header .nav .selected{
+    color: #ffc85a;
+
+}
+/* Header */

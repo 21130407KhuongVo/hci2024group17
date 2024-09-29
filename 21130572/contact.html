@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/styles/styles.css">
+    <link rel="stylesheet" href="asset/styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="./asset/javascript/w3school.js"></script>
+    <title>Tran Van Toan</title>
+</head>
+
+<body>
+    <div w3-include-html="header.html"></div>
+
+    <div class="content">
+        <div class="section-title">
+            <h2>Contact</h2>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="box">
+                    <h3>Social Profiles</h3>
+                    <div class="social-links">
+                        <a title="Discord" href="https://discord.gg/ZzX9uq9j" class="fa-brands fa-discord"></a>
+                        <a title="Facebook" href="https://www.facebook.com/profile.php?id=100073642981186"
+                            class="fa-brands fa-facebook"></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>My Email</h3>
+                    <p>21130572@st.hcmuaf.edu.vn</p>
+                </div>
+                <div class="box">
+                    <h3>Phone Number</h3>
+                    <p>+84 929 729 120</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="box">
+                    <form id="contactForm">
+                        <div>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div>
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div>
+                            <textarea name="message" rows="6" placeholder="Message" required></textarea>
+                        </div>
+                        <div id="form-status">
+                            <div class="loading" style="display:none;">Loading...</div>
+                            <div class="error-message" style="display:none;">There was an error, please try again.</div>
+                            <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div w3-include-html="footer.html"></div>
+</body>
+
+</html>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        console.log('Form Data:');
+        formData.forEach((value, key) => {
+            console.log(key + ': ' + value);
+        });
+
+        document.querySelector('.loading').style.display = 'block';
+
+        setTimeout(() => {
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('.sent-message').style.display = 'block';
+        }, 1000);
+
+        this.reset();
+    });
+    includeHTML();
+</script>

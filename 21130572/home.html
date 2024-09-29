@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/styles/styles.css">
+    <link rel="stylesheet" href="./asset/styles/index.css"">
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./asset/javascript/w3school.js"></script>
+    <title>Tran Van Toan</title>
+</head>
+
+<body>
+    <div w3-include-html="header.html"></div>
+
+    <div class="content">
+        <section>
+            <div class="hero-container">
+                <h1>Trần Văn Toàn</h1>
+                <h2>
+                    <p>Step by Step<br>Day by Day</p>
+                </h2>
+                <i class="scroll-btn" onclick="scrollToTestimonials()"><i class="fa-solid fa-angle-down"></i></i>
+            </div>
+        </section>
+
+        <section class="quotes">
+            <div class="section-title">
+                <h2>Favorite Quotes</h2>
+            </div>
+            <div class="quotes-container">
+                <div class="quote">
+                    <h3><b>"Giáo dục là vũ khí mạnh nhất mà người ta có thể sử dụng để thay đổi cả thế giới."</b></h3>
+                    <p>- Ngạn ngữ Gruzia -</p>
+                </div>
+                <div class="quote">
+                    <h3><b>"Đối với người trưởng thành, sự lựa chọn đầu tiên là luôn xem xét và tự quản lý việc học
+                            tập."</b></h3>
+                    <p>- William Charland - </p>
+                </div>
+                <div class="quote">
+                    <h3><b>"Sự ngu dốt không đáng xấu hổ bằng việc không chịu học hỏi."</b></h3>
+                    <p>- Benjamin Franklin - </p>
+                </div>
+                <div class="quote">
+                    <h3><b>"Điều ta biết như một giọt nước. Điều ta không biết thì mênh mông như cả đại dương."</b></h3>
+                    <p>- Einstein - </p>
+                </div>
+                <div class="quote">
+                    <h3><b>"Trường học có khả năng hô biến người thắng và người bại, nhưng cuộc sống thì không."</b>
+                    </h3>
+                    <p>- Bill Gates -</p>
+                </div>
+                <div class="quote">
+                    <h3><b>"Hiền dữ đâu phải do tính sẵn, phần nhiều do giáo dục mà nên."</b></h3>
+                    <p>- Hồ Chí Minh -</p>
+                </div>
+                <div class="quote">
+                    <h3><b>“Hỏi một câu chỉ dốt chốc lát. Nhưng không hỏi sẽ dốt nát cả đời.”</b></h3>
+                    <p>- Ngạn ngữ phương Tây -</p>
+                </div>
+                <div class="quote">
+                    <h3><b>“Hãy học từ sai lầm của người khác. Bạn sẽ không bao giờ sống đủ lâu để phạm phải tất cả sai
+                            lầm.”</b></h3>
+                    <p>- Groucho Marx -</p>
+                </div>
+                <div class="quote">
+                    <h3><b>“Hãy sống như ngày mai anh chết. Hãy học như anh sẽ sống mãi mãi.”</b></h3>
+                    <p>- Mahatma Gandhi -</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div w3-include-html="footer.html"></div>
+</body>
+
+</html>
+<script>
+    let currentQuoteIndex = 0;
+    const quotes = document.querySelectorAll('.quote');
+    const totalQuotes = quotes.length;
+
+    function showQuote(index) {
+        quotes.forEach((quote, i) => {
+            quote.classList.remove('active');
+            if (i === index) {
+                quote.classList.add('active');
+            }
+        });
+    }
+
+    function nextQuote() {
+        currentQuoteIndex = (currentQuoteIndex + 1) % totalQuotes;
+        showQuote(currentQuoteIndex);
+    }
+
+    setInterval(nextQuote, 5000);
+
+    showQuote(currentQuoteIndex);
+
+    function scrollToTestimonials() {
+        document.querySelector('.quotes').scrollIntoView({ behavior: 'smooth' });
+    }
+    includeHTML();
+</script>

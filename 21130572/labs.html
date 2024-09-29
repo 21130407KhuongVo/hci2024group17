@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/styles/styles.css">
+    <link rel="stylesheet" href="./asset/styles/lab.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="./asset/javascript/w3school.js"></script>
+    <title>Tran Van Toan</title>
+</head>
+
+<body>
+    <div w3-include-html="header.html"></div>
+
+    <div class="content">
+        <div class="lab-nav" id="lab-nav">
+            <ul>
+                <li><button type="button" class="lab-select" id="1">Lab 1</button></li>
+            </ul>
+        </div>
+
+        <div class="lab1" id="lab1">
+            <h1>Course Edit</h1>
+
+            <button type="button" class="new-course">New Course</button>
+
+            <form id="courseForm">
+                <div class="form-group">
+                    <label for="courseId">Course Name</label>
+                    <input type="text" id="courseId" name="courseId" value="Human-Computer Interaction" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="courseName">New Course Name (Required)</label>
+                    <input type="text" id="courseName" name="courseName" maxlength="255" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="courseDescription">Course Description (Optional)</label>
+                    <textarea id="courseDescription" name="courseDescription" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="instructor">Instructor</label>
+                    <select id="instructor" name="instructor" required>
+                        <option value="">Select Instructor</option>
+                        <option value="1">Trần Thị Thanh Nga</option>
+                        <option value="2">Phan Đinh Long</option>
+                        <option value="3">Nguyễn Đức Công Song</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="createdBy">Created By</label>
+                    <input type="text" id="createdBy" name="createdBy" value="Trần Văn Toàn" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="createdAt">Created At</label>
+                    <input type="text" id="createdAt" name="createdAt" value="0000-00-00" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="updatedAt">Last Updated</label>
+                    <input type="text" id="updatedAt" name="updatedAt" value="0000-00-00" readonly>
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit">Confirm Change</button>
+                    <button type="button" class="btn-cancel" onclick="cancelForm()">Cancel</button>
+                    <button type="button" class="btn-delete" onclick="deleteCourse()">Delete Course</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div w3-include-html="footer.html"></div>
+</body>
+
+<script>
+    function setCurrentDate() {
+        const today = new Date().toISOString().slice(0, 10); // Format: YYYY-MM-DD
+        document.getElementById('createdAt').value = today;
+        document.getElementById('updatedAt').value = today;
+    }
+
+    window.onload = function () {
+        setCurrentDate();
+    };
+    includeHTML();
+</script>
+
+</html>
