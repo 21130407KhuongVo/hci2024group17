@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--    Iconify Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!--    jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-lg">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"
+                        data-bs-title="<strong>ID</strong><br>Unique identifier for each entry. Used for reference purposes."
+                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true">#
+                    </th>
+                
+                    <th scope="col"
+                        data-bs-title="<strong>Task Name</strong><br>The name of the homework or assignment. Helps to quickly identify the task."
+                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true">Name
+                    </th>
+                
+                    <th scope="col"
+                        data-bs-title="<strong>Description</strong><br>A brief overview or instructions of the task. Usually includes details about what needs to be accomplished."
+                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true">Description
+                    </th>
+                
+                    <th scope="col"
+                        data-bs-title="<strong>Difficulty Level</strong><br>Categorized into: 
+                        <ul>
+                            <li><em>Easy</em>: Suitable for beginners.</li>
+                            <li><em>Medium</em>: Requires moderate skills and understanding.</li>
+                            <li><em>Hard</em>: Challenging tasks that need advanced skills.</li>
+                        </ul>"
+                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true">Level
+                    </th>
+                
+                    <th scope="col"
+                        data-bs-title="<strong>Expiry Date</strong><br>The deadline for the task. Format: <code>mm/dd/yyyy</code>. Tasks without an expiry date have no deadline."
+                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true">Expired
+                    </th>
+                
+                    <th scope="col"
+                        data-bs-title="<strong>Score</strong><br>The points achieved for completing the task, out of a maximum of 100. Higher scores indicate better performance."
+                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true">Score
+                    </th>
+                
+                    <th scope="col"
+                        data-bs-title="<strong>Programming Language</strong><br>The language in which the task needs to be implemented. Examples include Python, Java, JavaScript, etc."
+                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true">Language
+                    </th>
+                </tr>
+
+            </thead>
+            <tbody id="exercise-table">
+            </tbody>
+
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON('Homework.json', function (data) {
+                let currentDate = new Date();
+                let tableContent = '';
+
+                data.forEach((exercise, index) => {
+                    // Kiểm tra ngày expired
+                    let expiredDate = exercise.Expired ? new Date(exercise.Expired) : null;
+                    let isExpired = expiredDate && currentDate > expiredDate;
+
+                    // Nếu bài tập có expired và đã hết hạn, hiển thị alert
+                    let link = isExpired ? '#' : exercise.url;
+
+                    tableContent += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td class="w-25">
+                            <a href="${link}" onclick="${isExpired ? 'alert(\'This exercise has expired.\')' : ''}">
+                                ${exercise.Name}
+                            </a>
+                        </td>
+                        <td class="w-25 overflow-x-auto">${exercise.Description}</td>
+                        <td>${exercise.Level}</td>
+                        <td>${exercise.Expired ? exercise.Expired : 'No deadline'}</td>
+                        <td>${exercise.Score}</td>
+                        <td>${exercise.Language}</td>
+                    </tr>`;
+                });
+
+                $('#exercise-table').html(tableContent);
+            });
+        });
+
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+</body>
+
+</html>
