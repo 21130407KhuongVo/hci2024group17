@@ -17,11 +17,15 @@
     <div class="content">
         <div class="lab-nav" id="lab-nav">
             <ul>
-                <li><button type="button" class="lab-select" id="1">Lab 1</button></li>
+                <li><button type="button" class="lab-select" data-target="lab1">Lab 1</button></li>
+                <li><button type="button" class="lab-select" data-target="lab2">Lab 2</button></li>
+                <li><button type="button" class="lab-select" data-target="lab3">Lab 3</button></li>
+                <li><button type="button" class="lab-select" data-target="lab4">Lab 4</button></li>
+                <li><button type="button" class="lab-select" data-target="lab5">Lab 5</button></li>
             </ul>
         </div>
 
-        <div class="lab1" id="lab1">
+        <div class="lab-content" id="lab1" style="display: none">
             <h1>Course Edit</h1>
 
             <button type="button" class="new-course">New Course</button>
@@ -76,6 +80,262 @@
             </form>
         </div>
 
+        <div class="lab-content" id="lab2" style="display: none;">
+            <div class="login-container" id="login-container" style="display: block;">
+                <h2>Login</h2>
+                <form action="#">
+                    <input type="text" placeholder="Username/Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="login-btn" id="login-btn">Login</button>
+                </form>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <div class="dashboard-container" id="dashboard-container" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Dashboard</h2>
+                </div>
+
+                <div class="filter-bar">
+                    <select aria-label="language">
+                        <option value="all">All Languages</option>
+                        <option value="c">C</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </select>
+                    <input type="text" placeholder="Search for exercises...">
+                </div>
+
+                <div class="exercise-list">
+                    <div class="exercise-card">
+                        <h3>Array Manipulation</h3>
+                        <p>Perform various operations on arrays in C.</p>
+                        <p class="difficulty easy">Difficulty: Easy</p>
+                        <button>Select Exercise</button>
+                    </div>
+
+                    <div class="exercise-card">
+                        <h3>Sorting Algorithms</h3>
+                        <p>Implement different sorting algorithms in Python.</p>
+                        <p class="difficulty medium">Difficulty: Medium</p>
+                        <button>Select Exercise</button>
+                    </div>
+
+                    <div class="exercise-card">
+                        <h3>File Handling in Java</h3>
+                        <p>Work with files and streams in Java.</p>
+                        <p class="difficulty hard">Difficulty: Hard</p>
+                        <button>Select Exercise</button>
+                    </div>
+                </div>
+
+                <div class="logout">
+                    <button class="logout-btn" id="logout-btn">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="lab-content" id="lab3" style="display: none;">
+            <div class="material" style="display: block;">
+                <h2>Available Materials</h2>
+                <div class="materials-grid">
+                    <div class="material-card">
+                        <div class="icon">📘</div>
+                        <h3>All about Django Python</h3>
+                        <button>View Materials</button>
+                    </div>
+                    <div class="material-card">
+                        <div class="icon">📘</div>
+                        <h3>FEE</h3>
+                        <button>View Materials</button>
+                    </div>
+                    <div class="material-card">
+                        <div class="icon">📘</div>
+                        <h3>Hibernate</h3>
+                        <button>View Materials</button>
+                    </div>
+                    <div class="material-card">
+                        <div class="icon">📘</div>
+                        <h3>Java Mock Project</h3>
+                        <button>View Materials</button>
+                    </div>
+                    <div class="material-card">
+                        <div class="icon">📘</div>
+                        <h3>Java Programming Language</h3>
+                        <button>View Materials</button>
+                    </div>
+                    <div class="material-card">
+                        <div class="icon">📘</div>
+                        <h3>Java Spring Framework</h3>
+                        <button>View Materials</button>
+                    </div>
+                </div>
+            </div>
+            <div class="material-content" style="display: none;">
+                <div class="select-container">
+                    <label for="lesson-select">Choose a Lesson:</label>
+                    <select id="lesson-select">
+                        <option value="1">1. Introduction</option>
+                        <option value="2">2. Setting Up the Development Environment</option>
+                        <option value="3">3. Django Basic</option>
+                        <option value="4">4. Django Advanced Concepts</option>
+                        <option value="9">9. Pythonanywhere</option>
+                        <option value="syllabus">Syllabus</option>
+                    </select>
+                    <button class="back-button">Back to list</button>
+                </div>
+
+                <div class="lesson-content">
+                    <h2>1. Introduction</h2>
+                    <div class="content-display">
+                        <iframe src="./asset/pdf/Introduction_to_Python_Programming_-_WEB.pdf" width="100%"
+                            height="800px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lab-content" id="lab4" style="display: block;">
+            <div class="heading">
+                <nav>
+                    <a href="#"><i class="fa fa-arrow-left"></i> Home</a>
+                    <span>MuleSoft 4.X Complete Guide For Beginners - Hands On Projects</span>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <a href="#"><i class="fa fa-star"></i> Leave a rating</a>
+                    <a href="#"><i class="fa-solid fa-trophy"></i> Your progress</a>
+                    <select name="share" id="share" aria-label="share" class="box">
+                        <option value="1" selected disabled hidden>Share</option>
+                        <option value="2">Facebook</option>
+                        <option value="3">Discord</option>
+                        <option value="4">Instagram</option>
+                        <option value="5">Messenger</option>
+                    </select>
+                    <select name="more" id="more" aria-label="more" class="box">
+                        <option value="1" selected disabled hidden>More</option>
+                        <option value="2">Setting</option>
+                        <option value="3">Info</option>
+                    </select>
+                </nav>
+            </div>
+
+            <div class="main">
+                <div class="video-section">
+                    <iframe width="1200" height="770"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=kIpCO10AmsW1X5nJ" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="content">
+                        <div class="navigation">
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                                <li><a href="#">Overview</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">Notes</a></li>
+                                <li><a href="#">Annoucements</a></li>
+                                <li><a href="#">Reviews</a></li>
+                                <li><a href="#">Learning Tools</a></li>
+                            </ul>
+                        </div>
+                        <p class="title">Upgraded with the latest MuleSoft ESB versions, Anypoint Platform, DataWeave,
+                            MUnit, DevOps,
+                            MCD
+                            Tests, and Realtime Project</p>
+                        <p>4.6<i class="fa fa-star"></i> | 4,705 Ratings | 26,379 Students | 50.5 Hours Total</p>
+                        <p><i class="fa-solid fa-circle-info"></i> Last Updated November 2023</p>
+                        <p><i class="fa-solid fa-globe"></i> English <i class="fa-solid fa-closed-captioning"></i>
+                            English [Auto], French [Auto],...</p>
+                        <div class="box">
+                            <p class="title">What you'll learn</p>
+                            <div class="flex">
+                                <div class="column">
+                                    <p><i class="fa-solid fa-check"></i> You will became an expert in Mule ESB, Anypoint
+                                        platform operations, MUnit and DevOps with Mule</p>
+                                    <p><i class="fa-solid fa-check"></i> Step by step coding in detail explanation</p>
+                                    <p><i class="fa-solid fa-check"></i> You as a student/customer should be able to
+                                        setup mulesoft by your own for your organization</p>
+                                    <p><i class="fa-solid fa-check"></i> You should be able to develop, design, manage
+                                        projects</p>
+                                    <p><i class="fa-solid fa-check"></i> Mule level 1, level 2 and Integration Associate
+                                        certifications are guarantee</p>
+                                </div>
+                                <div class="column">
+                                    <p><i class="fa-solid fa-check"></i> This course teaches you mule 4.x in depth
+                                        including all the phases of SDLC</p>
+                                    <p><i class="fa-solid fa-check"></i> You will feel real time hands on experience
+                                        after finishing this course</p>
+                                    <p><i class="fa-solid fa-check"></i> The course will kepp on added with new topics
+                                        from mulesoft</p>
+                                    <p><i class="fa-solid fa-check"></i> One course destination to learn all the actions
+                                        of real time project</p>
+                                    <p><i class="fa-solid fa-check"></i> Mule real time project of this course helps you
+                                        to deal with all real time project activities and makes you confident while you
+                                        are working in real time</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-content">
+                    <h3>Course content</h3>
+                    <div class="section">
+                        <p>2. Integration introduction <span>8min</span></p>
+                        <p>3. Mule API development life cycle and components <span>4min</span>
+                        </p>
+                        <p>4. Course resources & documents <span>1min</span>
+                        </p>
+                    </div>
+
+                    <h4>Section 2: Mule 4 installation set-up</h4>
+                    <p>0 / 2 | 21min</p>
+
+                    <h4>Section 3: Mule basics - Develop first mule app, run, debug, export & import mule app</h4>
+                    <p>0 / 7 | 42min</p>
+
+                    <h4>Section 4: Mule basics - Mule events and mule message structure</h4>
+                    <p>0 / 12 | 1hr 17min</p>
+
+                    <h4>Section 5: Mule basics - Basic Transformations</h4>
+                    <p>0 / 5 | 1hr 2min</p>
+
+                    <h4>Section 6: Mule rest-full services (database) as provider - simple use case to get started</h4>
+                    <p>0 / 6 | 56min</p>
+
+                    <h4>Section 7: DataWeave language - basics</h4>
+                    <p>0 / 10 | 1hr 11min</p>
+
+                    <h4>Section 8: Mule database module - first system API uh hub (database) sapi...</h4>
+                    <p>0 / 9 | 1hr 15min</p>
+
+                    <h4>Section 9: Mule validation module and flow types</h4>
+                    <p>0 / 7 | 57min</p>
+
+                    <h4>Section 10: Mule error handling</h4>
+                    <p>0 / 11 | 2hr 22min</p>
+
+                    <h4>Section 11: Anypoint platform introduction & access management</h4>
+                    <p>0 / 3 | 19min</p>
+
+                    <h4>Section 12: Anypoint Platform - Design Center - Design API's Using RAML</h4>
+                    <p>0 / 6 | 1hr</p>
+
+                    <h4>Section 13: Anypoint Platform - Design Center - Design Fragments Based API's...</h4>
+                    <p>0 / 9 | 57min</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lab-content" id="lab5" style="display: none;">
+        <p>Lab 5</p>
+    </div>
+
     </div>
 
     <div w3-include-html="footer.html"></div>
@@ -92,6 +352,48 @@
         setCurrentDate();
     };
     includeHTML();
+
+    const buttons = document.querySelectorAll('.lab-select');
+    const labs = document.querySelectorAll('.lab-content');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            const targetLab = button.getAttribute('data-target');
+
+            labs.forEach(lab => {
+                lab.style.display = 'none';
+            });
+
+            document.getElementById(targetLab).style.display = 'block';
+            document.getElementById(targetLab)
+        });
+    });
+
+    document.getElementById('login-btn').addEventListener('click', function () {
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('dashboard-container').style.display = 'block';
+    });
+    document.getElementById('logout-btn').addEventListener('click', function () {
+        document.getElementById('login-container').style.display = 'block';
+        document.getElementById('dashboard-container').style.display = 'none';
+    });
+
+    const viewButtons = document.querySelectorAll('.material-card button');
+    const materialSection = document.querySelector('.material');
+    const materialContentSection = document.querySelector('.material-content');
+    const backButton = document.querySelector('.back-button');
+
+    viewButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            materialSection.style.display = 'none';
+            materialContentSection.style.display = 'block';
+        });
+    });
+
+    backButton.addEventListener('click', () => {
+        materialContentSection.style.display = 'none';
+        materialSection.style.display = 'block';
+    });
 </script>
 
 </html>

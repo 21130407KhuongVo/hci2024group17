@@ -38,7 +38,7 @@
     transition: 0.3s;
 }
 
-.header .nav .selected{
+.header .nav a.selected{
     color: #ffc85a;
 
 }

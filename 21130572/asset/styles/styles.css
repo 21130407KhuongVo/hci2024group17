@@ -11,7 +11,7 @@ ul {
     list-style: none;
 }
 
-body{
+body {
     /* padding-top: 40px; */
     min-height: 100vh;
     display: flex;
@@ -19,8 +19,7 @@ body{
 }
 
 /* Content */
-.content{
+.content {
     flex-grow: 1;
 }
 /* Content */
-

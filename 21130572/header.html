@@ -18,15 +18,34 @@
         </div>
         <div class="nav">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <!-- <li><a href="resume.html">Resume</a></li> -->
-                <li><a href="labs.html">Labs</a></li>
-                <li><a href="result.html">Result</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="home.html" id="home-link">Home</a></li>
+                <li><a href="about.html" id="about-link">About</a></li>
+                <li><a href="resume.html" id="resume-link">Resume</a></li>
+                <li><a href="labs.html" id="labs-link">Labs</a></li>
+                <li><a href="result.html" id="result-link">Result</a></li>
+                <li><a href="contact.html" id="contact-link">Contact</a></li>
             </ul>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("Script is running");
+            const currentPage = window.location.pathname.split("/").pop().split("?")[0].split("#")[0];
+
+            if (currentPage === "home.html") {
+                document.getElementById("home-link").classList.add("selected");
+            } else if (currentPage === "about.html") {
+                document.getElementById("about-link").classList.add("selected");
+            } else if (currentPage === "labs.html") {
+                document.getElementById("labs-link").classList.add("selected");
+            } else if (currentPage === "result.html") {
+                document.getElementById("result-link").classList.add("selected");
+            } else if (currentPage === "contact.html") {
+                document.getElementById("contact-link").classList.add("selected");
+            }
+        });
+    </script>
 </body>
 
 </html>
