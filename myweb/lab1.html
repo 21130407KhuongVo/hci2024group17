@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Khóa Học</title>
+    <link rel="stylesheet" href="style-lab1.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tạo Khóa Học</h1>
+        <form id="courseForm">
+            <label for="courseId">ID Khóa Học</label>
+            <input type="text" id="courseId" value="AUTO_GENERATED" readonly>
+
+            <label for="courseName">Tên Khóa Học</label>
+            <input type="text" id="courseName" placeholder="Nhập tên khóa học" required maxlength="255>
+
+            <label for=" courseDescription">Mô Tả Khóa Học</label>
+            <textarea id="courseDescription" placeholder="Nhập mô tả khóa học" rows="4"></textarea>
+
+            <label for="instructor">Giảng Viên</label>
+            <select id="instructor" required>
+                <option value="">Chọn giảng viên</option>
+                <option value="user1">Giảng viên 1</option>
+                <option value="user2">Giảng viên 2</option>
+                <!-- Các giảng viên khác có thể thêm vào đây -->
+            </select>
+
+            <label>Ngày Tạo</label>
+            <input type="text" id="createdAt" readonly value="2024-09-28 10:00:00">
+
+            <label>Ngày Cập Nhật</label>
+            <input type="text" id="updatedAt" readonly value="2024-09-29 12:00:00">
+
+            <button type="submit">Tạo Khóa Học</button>
+            <button type="button" onclick="window.location.href='/'">Hủy</button>
+        </form>
+    </div>
+</body>
+
+</html>

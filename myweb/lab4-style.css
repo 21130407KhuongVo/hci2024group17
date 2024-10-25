@@ -1,0 +1,165 @@
+body {font-family: Arial;}
+
+header {
+    display: flex;
+    background-color: rgba(3, 3, 3, 0.836);
+}
+
+.home_link {
+    margin: 14px 16px;
+    color: #ccc;
+}
+
+.title {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-right: 520px;
+    color: #ccc;
+}
+
+.rating_link {
+    margin: 14px 16px;
+}
+
+.progress_link {
+    margin: 14px 16px;
+}
+
+.header_button {
+    margin: 7px 8px;
+    background-color: rgba(3, 3, 3, 0.836);
+    color: #ccc;
+    border: 1px solid #ccc;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+}
+
+.main_content {
+    padding: 16px 16px;
+}
+
+.index {
+    display: flex;
+}
+
+.rating {
+    margin: 14px 20px 14px 0px;
+}
+
+.view {
+    margin: 14px 20px 14px 0px;
+}
+
+.time {
+    margin: 14px 16px 14px 0px;
+}
+
+.date_updated {
+    display: flex;
+    align-items: center;
+}
+
+.languages {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.review {
+    margin-top: 70px;
+    border: 1px solid lightgray;
+}
+
+.review b {
+    margin: 24px 24px;
+    font-size: x-large;
+}
+
+.review_content {
+    display: flex;
+    align-items: center;
+}
+
+.review_content p {
+    margin: 2px 8px;
+}
+
+.course-content {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    /* max-width: 350px; */
+}
+
+.course-content h3 {
+    margin-top: 0;
+}
+
+.course-section {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.course-section h4 {
+    margin: 0;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-section .lessons {
+    padding-left: 20px;
+}
+
+.lessons p {
+    margin: 8px 0;
+    cursor: pointer;
+    color: black;
+}
+
+.lessons p:hover {
+    text-decoration: underline;
+}
+
+.course-section.collapsed .lessons {
+    display: none;
+}

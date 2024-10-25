@@ -1,0 +1,32 @@
+.main-content {
+    text-align: center;
+}
+
+.courses {
+    margin: 30px 40px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses .icon {
+    margin: 12px 16px;
+}
+
+.courses p {
+    margin: 12px 16px;
+}
+
+.courses button {
+    margin: 12px 16px;
+    background-color: white;
+    color: rgb(0, 123, 255);
+    border-radius: 6px;
+    width: 140px;
+    height: 44px;
+    border: 1px solid rgb(0, 123, 255);
+}
