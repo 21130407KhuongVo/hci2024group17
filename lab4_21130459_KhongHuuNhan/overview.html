@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .custom-navbar {
+            background-color: #2a2a2a;
+            color: white;
+            padding: 10px 20px;
+        }
+        .custom-navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-left i {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-right .dropdown, .navbar-right a {
+            margin-right: 20px;
+        }
+        .navbar-right button {
+            color: white;
+            border: none;
+            background: none;
+        }
+        .navbar-text {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 14px;
+        }
+        .video-nav a {
+            color: #495057;
+            margin-right: 20px;
+        }
+        .video-nav .nav-link.active {
+            font-weight: bold;
+        }
+        .search-icon {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .course-info {
+            margin-top: 20px;
+        }
+        .course-info .title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .course-info .stats {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        .course-info .stats .star-rating {
+            color: #ffc107;
+            margin-right: 10px;
+        }
+        .course-info .stats .students,
+        .course-info .stats .duration {
+            margin-left: 30px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Custom Navigation Bar -->
+<div class="custom-navbar d-flex justify-content-between align-items-center">
+    <!-- Left Side -->
+    <div class="navbar-left">
+        <a href="#">
+            <i class="fas fa-arrow-left"></i> Home
+        </a>
+    </div>
+
+    <!-- Center: Title -->
+    <div class="navbar-text">
+        MuleSoft 4.X Complete Guide For Beginners - Hands On Projects
+    </div>
+
+    <!-- Right Side -->
+    <div class="navbar-right">
+        <a href="#">Leave a rating</a>
+        <div class="dropdown">
+            <a href="#" id="progressDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Your progress <span class="badge badge-light">0%</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="progressDropdown">
+                <a class="dropdown-item" href="#">View Progress</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle" type="button" id="shareDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Share
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="shareDropdown">
+                <a class="dropdown-item" href="#">Share on Facebook</a>
+                <a class="dropdown-item" href="#">Share on Twitter</a>
+                <a class="dropdown-item" href="#">Copy Link</a>
+            </div>
+        </div>
+        <button>
+            <i class="fas fa-ellipsis-v"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Two Column Layout below Navbar -->
+<div class="container-fluid mt-4">
+    <div class="row">
+        <!-- Left Column (Wider) -->
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/rfG8ce4nNh0?si=N6QrGeSYY2-a1KE3" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Bar Below the Video -->
+            <nav class="video-nav mt-3">
+                <div class="nav nav-tabs d-flex align-items-center" id="nav-tab" role="tablist">
+                    <!-- Search Icon -->
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a class="nav-link active" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="true">Overview</a>
+                    <a class="nav-link" id="nav-qna-tab" data-toggle="tab" href="#nav-qna" role="tab" aria-controls="nav-qna" aria-selected="false">Q&A</a>
+                    <a class="nav-link" id="nav-notes-tab" data-toggle="tab" href="#nav-notes" role="tab" aria-controls="nav-notes" aria-selected="false">Notes</a>
+                    <a class="nav-link" id="nav-announcements-tab" data-toggle="tab" href="#nav-announcements" role="tab" aria-controls="nav-announcements" aria-selected="false">Announcements</a>
+                    <a class="nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">Reviews</a>
+                    <a class="nav-link" id="nav-tools-tab" data-toggle="tab" href="#nav-tools" role="tab" aria-controls="nav-tools" aria-selected="false">Learning Tools</a>
+                </div>
+            </nav>
+
+            <!-- Course Info Section -->
+            <div class="course-info mt-4">
+                <div class="title">Upgraded with latest MuleSoft ESB versions, Anypoint Platform, DataWeave, MUnit, DevOps, MCD Tests and Realtime Project</div>
+                <div class="stats">
+                    <!-- Rating -->
+                    <div class="star-rating">
+                        <i class="fas fa-star"></i> 4.6
+                    </div>
+                    <!-- Number of ratings -->
+                    <div class="rating-count">
+                        4,705 ratings
+                    </div>
+                    <!-- Number of students -->
+                    <div class="students">
+                        26,379 Students
+                    </div>
+                    <!-- Course duration -->
+                    <div class="duration">
+                        50.5 hours Total
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column (Narrower) -->
+        <div class="col-lg-4">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Course Content
+                </a>
+
+                <!-- List Item 1: Integration Introduction -->
+                <div class="list-group-item">
+                    <div>
+                        <input type="checkbox" aria-label="Checkbox for Integration Introduction">
+                        <span>2. Integration Introduction</span>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fas fa-video"></i>
+                        <span class="ml-2">8 min</span>
+                    </div>
+                </div>
+
+                <!-- List Item 2: Mule API Development -->
+                <div class="list-group-item">
+                    <div>
+                        <input type="checkbox" aria-label="Checkbox for Mule API Development">
+                        <span>3. Mule API Development</span>
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <i class="fas fa-video"></i>
+                        <span class="ml-2">4 min</span>
+                    </div>
+                </div>
+
+                <!-- List Item 3: Course Resources with Resources button aligned right -->
+                <div class="list-group-item">
+                    <div>
+                        <input type="checkbox" aria-label="Checkbox for Course Resources">
+                        <span>4. Course Resources</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-2">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-folder"></i>
+                            <span class="ml-2">1 min</span>
+                        </div>
+                        <div class="ml-auto">
+                            <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="resourcesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Resources
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="resourcesDropdown">
+                                <a class="dropdown-item" href="#">Resource 1</a>
+                                <a class="dropdown-item" href="#">Resource 2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 with Chevron -->
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Section 2: Mule 4 Installation Set-up (21 min)</span>
+                        <i class="fas fa-chevron-down"></i> <!-- Chevron down added -->
+                    </div>
+                </a>
+
+                <!-- Section 3 with Chevron -->
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Section 3: Mule Basics - Develop First Mule App (42 min)</span>
+                        <i class="fas fa-chevron-down"></i> <!-- Chevron down added -->
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
