@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My learning</h1>
+      <div class="watched-time">
+        87hr 36min watched <span>View all activity</span>
+      </div>
+    </header>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div data-tab="courses" class="tab">All courses</div>
+      <div data-tab="learning-paths" class="tab">Learning paths</div>
+      <div data-tab="certifications" class="tab active">Certifications</div>
+      <div data-tab="archived" class="tab">Archived</div>
+      <div data-tab="learning-tools" class="tab">Learning tools</div>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="courses" class="tab-content">
+      <h2>All Courses</h2>
+      <p>Here, you can find a list of all courses you are enrolled in.</p>
+    </div>
+
+    <div id="learning-paths" class="tab-content">
+      <h2>Learning Paths</h2>
+      <p>
+        This section contains guided learning paths to help you achieve specific
+        skills.
+      </p>
+    </div>
+
+    <div id="certifications" class="tab-content active">
+      <section class="badges">
+        <h2>My badges <span>ℹ️</span></h2>
+        <p>You have earned and uploaded <strong>0 badges</strong></p>
+        <p>
+          Currently, there are no badges uploaded to your profile. Begin your
+          journey towards your certification goals or
+          <a href="#">upload your third-party badges</a> to your profile and
+          impress your manager and peers with your accomplishments.
+        </p>
+        <button>Import new badge</button>
+      </section>
+
+      <section class="certifications">
+        <h2>Certification preparation <span>ℹ️</span></h2>
+        <p>You are preparing for <strong>4 certifications</strong></p>
+        <button>Explore certification preparation</button>
+
+        <div class="certification-list">
+          <div class="certification-item">
+            <div class="info">
+              <img src="oracle-badge.png" alt="Oracle Badge" />
+              <div>
+                <h3>Oracle Certified Associate, Java SE 8 Programmer</h3>
+                <p>Oracle</p>
+              </div>
+            </div>
+            <div class="more-options">⋮</div>
+          </div>
+          <div class="certification-item">
+            <div class="info">
+              <img src="istqb-badge.png" alt="ISTQB Badge" />
+              <div>
+                <h3>ISTQB® Certified Tester Foundation Level (CTFL)</h3>
+                <p>Brightest</p>
+              </div>
+            </div>
+            <div class="more-options">⋮</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="archived" class="tab-content">
+      <h2>Archived Courses</h2>
+      <p>Your archived courses are stored here for future reference.</p>
+    </div>
+
+    <div id="learning-tools" class="tab-content">
+      <h2>Learning Tools</h2>
+      <p>
+        Explore various tools and resources to aid in your learning journey.
+      </p>
+    </div>
+  </body>
+  <script>
+    document.querySelectorAll(".tab-bar .tab").forEach((tab) => {
+      tab.addEventListener("click", function () {
+        document.querySelectorAll(".tab-content").forEach((content) => {
+          content.classList.remove("active");
+        });
+        document.querySelectorAll(".tab-bar .tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        document.getElementById(tab.dataset.tab).classList.add("active");
+        tab.classList.add("active");
+      });
+    });
+  </script>
+</html>
