@@ -1,0 +1,109 @@
+{
+    "courses": [
+        {
+            "id": "introduction-to-python",
+            "title": "Introduction to Python",
+            "source": "../images/java_thumbnail.png",
+            "description": "A beginner's course to learn Python programming language.",
+            "document": "Articles/2-Methods for Classes.pptx.pdf"
+        },
+        {
+            "id": "web-development-with-html-css",
+            "title": "Web Development with HTML & CSS",
+            "source": "../images/java_thumbnail.png",
+            "description": "Learn how to build beautiful and responsive websites using HTML and CSS.",
+            "document": "Articles/BB_HopBCHMoRong_11_9_2024.pdf"
+        },
+        {
+            "id": "javascript-basics",
+            "title": "JavaScript Basics",
+            "source": "../images/java_thumbnail.png",
+            "description": "Understand the fundamentals of JavaScript to enhance web interactivity.",
+            "document": "Articles/Excercise2-Class Methods.pdf"
+        },
+        {
+            "id": "advanced-javascript",
+            "title": "Advanced JavaScript",
+            "source": "../images/java_thumbnail.png",
+            "description": "Deep dive into advanced JavaScript concepts and techniques.",
+            "document": "Articles/QUẢN LÝ DỰ ÁN PHẦN MỀM_NHÓM 1_CA 1.pdf"
+        },
+        {
+            "id": "java-programming",
+            "title": "Java Programming",
+            "source": "../images/java_thumbnail.png",
+            "description": "Comprehensive Java programming course for building robust applications.",
+            "document": "Articles/Quiz Game Technical Design.pdf"
+        },
+        {
+            "id": "spring-boot-fundamentals",
+            "title": "Spring Boot Fundamentals",
+            "source": "../images/java_thumbnail.png",
+            "description": "Learn the basics of Spring Boot framework to create scalable web applications.",
+            "document": "Articles/Excercise2-Class Methods.pdf"
+        },
+        {
+            "id": "reactjs-development",
+            "title": "ReactJS Development",
+            "source": "../images/java_thumbnail.png",
+            "description": "Master the fundamentals of ReactJS for building dynamic web applications.",
+            "document": "Articles/2-Methods for Classes.pptx.pdf"
+        },
+        {
+            "id": "angular-complete-guide",
+            "title": "Angular Complete Guide",
+            "source": "../images/java_thumbnail.png",
+            "description": "A complete guide to learn Angular framework for modern web development.",
+            "document": "Articles/BB_HopBCHMoRong_11_9_2024.pdf"
+        },
+        {
+            "id": "data-structures-and-algorithms",
+            "title": "Data Structures and Algorithms",
+            "source": "../images/java_thumbnail.png",
+            "description": "Understand the core concepts of data structures and algorithms.",
+            "document": "Articles/QUẢN LÝ DỰ ÁN PHẦN MỀM_NHÓM 1_CA 1.pdf"
+        },
+        {
+            "id": "docker-for-beginners",
+            "title": "Docker for Beginners",
+            "source": "../images/java_thumbnail.png",
+            "description": "Get started with containerization and Docker to streamline application deployment.",
+            "document": "Articles/Quiz Game Technical Design.pdf"
+        },
+        {
+            "id": "machine-learning-introduction",
+            "title": "Machine Learning Introduction",
+            "source": "../images/java_thumbnail.png",
+            "description": "Learn the basic concepts and techniques of machine learning.",
+            "document": "Articles/BB_HopBCHMoRong_11_9_2024.pdf"
+        },
+        {
+            "id": "kotlin-for-android-development",
+            "title": "Kotlin for Android Development",
+            "source": "../images/java_thumbnail.png",
+            "description": "Build Android apps with modern language features using Kotlin.",
+            "document": "Articles/Excercise2-Class Methods.pdf"
+        },
+        {
+            "id": "devops-essentials",
+            "title": "DevOps Essentials",
+            "source": "../images/java_thumbnail.png",
+            "description": "Explore the essential practices and tools used in DevOps.",
+            "document": "Articles/QUẢN LÝ DỰ ÁN PHẦN MỀM_NHÓM 1_CA 1.pdf"
+        },
+        {
+            "id": "nodejs-backend-development",
+            "title": "Node.js Backend Development",
+            "source": "../images/java_thumbnail.png",
+            "description": "Learn how to build scalable backend services using Node.js.",
+            "document": "Articles/Quiz Game Technical Design.pdf"
+        },
+        {
+            "id": "git-and-github-masterclass",
+            "title": "Git and GitHub Masterclass",
+            "source": "../images/java_thumbnail.png",
+            "description": "Master version control with Git and collaborate on projects using GitHub.",
+            "document": "Articles/2-Methods for Classes.pptx.pdf"
+        }
+    ]
+}
