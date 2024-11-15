@@ -44,14 +44,14 @@
       "id": 21130459,
       "username": "",
       "fullname": "Khổng Hữu Nhân",
-      "birthday": "",
+      "birthday": "2003-08-22",
       "github": "k-huunhan",
       "facebook": "profile.php?id=100079054593761",
       "linkedin": "",
       "avatar": "HuuNhan.jpeg",
-      "role": "",
-      "email": "",
-      "password": "",
+      "role": "member",
+      "email": "21130459@st.hcmuaf.edu.vn",
+      "password": "21130459",
       "createAt": "",
       "context": "developer"
     },
@@ -155,6 +155,17 @@
       "status": "Hoàn thành",
       "design_src":"sign_in.png",
       "implement_src":"/SignIn.html"
+    },
+    {
+      "id_requirement": 5,
+      "function": "Tạo giao diện Register",
+      "proposer": "21130459",
+      "designer": "21130459",
+      "implementer": "21130459",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"register.jpg",
+      "implement_src":"/register.html"
     }
   ]
 }
