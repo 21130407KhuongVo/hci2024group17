@@ -53,7 +53,13 @@
       "email": "21130459@st.hcmuaf.edu.vn",
       "password": "21130459",
       "createAt": "",
-      "context": "developer"
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "Tạo trang Register",
+          "assessment": 100
+        }
+      ]
     },
     {
       "id": 21130572,
