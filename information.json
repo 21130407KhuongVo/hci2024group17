@@ -19,7 +19,10 @@
           "description": "Tạo repository, deploy github page",
           "assessment": 100
         },
-        {}
+        {
+          "description": "Tạo trang group_diary, projects",
+          "assessment": 100
+        }
       ]
     },
     {
@@ -95,42 +98,63 @@
       "email": "qinhuuuuu@gmail.com",
       "password": "",
       "createAt": "",
-      "context": "developer"
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "",
+          "assessment": 100
+        },
+        {
+          "description": "Tạo trang sign in",
+          "assessment": 100
+        }
+      ]
     }
   ],
   "requirements": [
     {
       "id_requirement": 1,
-      "function": "Tạo giao diện người dùng cho trang chủ",
-      "proposer": "21130401",
-      "designer": "21130402",
-      "implementer": "21130403",
-      "estimated_time": "15/11/2024 - 20/11/2024",
-      "status": "Chưa hoàn thành",
-      "design_src":"meow_meme.jpeg",
-      "implement_src":""
+      "function": "Tạo giao diện trang chủ cho nhóm",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"homepage.png",
+      "implement_src":"/index.html"
     },
     {
       "id_requirement": 2,
-      "function": "Xây dựng chức năng đăng nhập",
-      "proposer": "21130404",
-      "designer": "21130405",
-      "implementer": "21130406",
-      "estimated_time": "15/11/2024 - 20/11/2024",
+      "function": "Tạo giao diện hiển thị group_diary",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src":"meow_meme.jpeg",
-      "implement_src":""
+      "design_src":"group_diary.png",
+      "implement_src":"/group_diary.html"
     },
     {
       "id_requirement": 3,
-      "function": "Xây dựng hệ thống thông báo",
+      "function": "Tạo giao diện hiển thị projects",
       "proposer": "21130407",
-      "designer": "21130408",
-      "implementer": "21130409",
-      "estimated_time": "15/11/2024 - 20/11/2024",
-      "status": "Đang thực hiện",
-      "design_src":"meow_meme.jpeg",
-      "implement_src":""
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"projects_1.png",
+      "implement_src":"/projects.html"
+    },
+    {
+      "id_requirement": 4,
+      "function": "Tạo giao diện Sign in",
+      "proposer": "20130356",
+      "designer": "20130356",
+      "implementer": "20130356",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"sign_in.png",
+      "implement_src":"/SignIn.html"
     }
   ]
 }
