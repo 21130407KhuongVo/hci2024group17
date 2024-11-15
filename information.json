@@ -13,7 +13,14 @@
       "email": "21130407@st.hcmuaf.edu.vn",
       "password": "21052003",
       "createAt": "2024-09-21",
-      "context": "developer"
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "Tạo repository, deploy github page",
+          "assessment": 100
+        },
+        {}
+      ]
     },
     {
       "id": 21130425,
@@ -89,6 +96,41 @@
       "password": "",
       "createAt": "",
       "context": "developer"
+    }
+  ],
+  "requirements": [
+    {
+      "id_requirement": 1,
+      "function": "Tạo giao diện người dùng cho trang chủ",
+      "proposer": "21130401",
+      "designer": "21130402",
+      "implementer": "21130403",
+      "estimated_time": "15/11/2024 - 20/11/2024",
+      "status": "Chưa hoàn thành",
+      "design_src":"meow_meme.jpeg",
+      "implement_src":""
+    },
+    {
+      "id_requirement": 2,
+      "function": "Xây dựng chức năng đăng nhập",
+      "proposer": "21130404",
+      "designer": "21130405",
+      "implementer": "21130406",
+      "estimated_time": "15/11/2024 - 20/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"meow_meme.jpeg",
+      "implement_src":""
+    },
+    {
+      "id_requirement": 3,
+      "function": "Xây dựng hệ thống thông báo",
+      "proposer": "21130407",
+      "designer": "21130408",
+      "implementer": "21130409",
+      "estimated_time": "15/11/2024 - 20/11/2024",
+      "status": "Đang thực hiện",
+      "design_src":"meow_meme.jpeg",
+      "implement_src":""
     }
   ]
 }
