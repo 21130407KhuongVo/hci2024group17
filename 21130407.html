@@ -102,6 +102,12 @@
     <script>
         $(document).ready(function () {
 
+            // Kiểm tra trạng thái đăng nhập từ localStorage
+            if (!localStorage.getItem("loggedIn")) {
+                // Nếu chưa đăng nhập, điều hướng tới trang đăng nhập
+                window.location.href = "SignIn.html";
+            }
+
             let tasks = ['Task 1', 'Task 2']
 
             setHeader()
