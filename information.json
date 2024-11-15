@@ -56,6 +56,10 @@
       "context": "developer",
       "group_diary": [
         {
+          "description": "",
+          "assessment": 0
+        },
+        {
           "description": "Tạo trang Register",
           "assessment": 100
         }
@@ -170,8 +174,8 @@
       "implementer": "21130459",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src":"register.jpg",
-      "implement_src":"/register.html"
+      "design_src":"/register.png",
+      "implement_src":"register.html"
     }
   ]
 }
