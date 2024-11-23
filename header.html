@@ -1,7 +1,29 @@
 <header class="d-flex justify-content-center py-3">
-    <ul class="nav nav-pills">
+    <ul id="headerTabs" class="nav nav-pills">
         <li class="nav-item"><a href="./index.html" id="nav_home" class="nav-link active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="#" id="nav_about" class="nav-link disabled">About</a></li>
-        <!-- <li class="nav-item"><a href="#" class="nav-link">Profile</a></li> -->
+        <li class="nav-item"><a href="./group_diary.html" class="nav-link">Group diary</a></li>
+        <li class="nav-item"><a href="./projects.html" class="nav-link">Projects</a></li>
     </ul>
 </header>
+
+<script>
+    $(document).ready(function () {
+    // Lấy phần tên file của URL hiện tại
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Đặt tab `active` dựa trên tên file
+    $('#headerTabs .nav-link').each(function () {
+        // Lấy thuộc tính href của từng link
+        const linkPage = $(this).attr('href').split("/").pop();
+
+        // So sánh tên file trong href với tên file của trang hiện tại
+        if (linkPage === currentPage) {
+            // Nếu trùng khớp, thêm class `active` và bỏ `active` khỏi các tab khác
+            $('#headerTabs .nav-link').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+});
+
+</script>

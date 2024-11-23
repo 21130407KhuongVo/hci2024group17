@@ -14,7 +14,16 @@
       "password": "21052003",
       "createAt": "2024-09-21",
       "context": "developer",
-      "profile":"/21130407/21130407.html"
+      "group_diary": [
+        {
+          "description": "Tạo repository, deploy github page",
+          "assessment": 100
+        },
+        {
+          "description": "Tạo trang group_diary, projects",
+          "assessment": 100
+        }
+      ]
     },
     {
       "id": 21130425,
@@ -35,16 +44,26 @@
       "id": 21130459,
       "username": "",
       "fullname": "Khổng Hữu Nhân",
-      "birthday": "",
+      "birthday": "2003-08-22",
       "github": "k-huunhan",
       "facebook": "profile.php?id=100079054593761",
       "linkedin": "",
       "avatar": "HuuNhan.jpeg",
-      "role": "",
-      "email": "",
-      "password": "",
+      "role": "member",
+      "email": "21130459@st.hcmuaf.edu.vn",
+      "password": "21130459",
       "createAt": "",
-      "context": "developer"
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "",
+          "assessment": 0
+        },
+        {
+          "description": "Tạo trang Register",
+          "assessment": 100
+        }
+      ]
     },
     {
       "id": 21130572,
@@ -89,7 +108,74 @@
       "email": "qinhuuuuu@gmail.com",
       "password": "",
       "createAt": "",
-      "context": "developer"
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "",
+          "assessment": 100
+        },
+        {
+          "description": "Tạo trang sign in",
+          "assessment": 100
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id_requirement": 1,
+      "function": "Tạo giao diện trang chủ cho nhóm",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"./homepage.png",
+      "implement_src":"./index.html"
+    },
+    {
+      "id_requirement": 2,
+      "function": "Tạo giao diện hiển thị group_diary",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"./group_diary.png",
+      "implement_src":"./group_diary.html"
+    },
+    {
+      "id_requirement": 3,
+      "function": "Tạo giao diện hiển thị projects",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"./projects_1.png",
+      "implement_src":"./projects.html"
+    },
+    {
+      "id_requirement": 4,
+      "function": "Tạo giao diện Sign in",
+      "proposer": "20130356",
+      "designer": "20130356",
+      "implementer": "20130356",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"./sign_in.png",
+      "implement_src":"./SignIn.html"
+    },
+    {
+      "id_requirement": 5,
+      "function": "Tạo giao diện Register",
+      "proposer": "21130459",
+      "designer": "21130459",
+      "implementer": "21130459",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src":"./register.png",
+      "implement_src":"./register.html"
     }
   ]
 }
