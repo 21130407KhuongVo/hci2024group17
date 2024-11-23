@@ -130,8 +130,8 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src":"homepage.png",
-      "implement_src":"index.html"
+      "design_src":"./homepage.png",
+      "implement_src":"./index.html"
     },
     {
       "id_requirement": 2,
@@ -141,8 +141,8 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src":"group_diary.png",
-      "implement_src":"group_diary.html"
+      "design_src":"./group_diary.png",
+      "implement_src":"./group_diary.html"
     },
     {
       "id_requirement": 3,
@@ -152,8 +152,8 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src":"projects_1.png",
-      "implement_src":"projects.html"
+      "design_src":"./projects_1.png",
+      "implement_src":"./projects.html"
     },
     {
       "id_requirement": 4,
@@ -163,8 +163,8 @@
       "implementer": "20130356",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src":"sign_in.png",
-      "implement_src":"SignIn.html"
+      "design_src":"./sign_in.png",
+      "implement_src":"./SignIn.html"
     },
     {
       "id_requirement": 5,
@@ -174,8 +174,8 @@
       "implementer": "21130459",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src":"register.png",
-      "implement_src":"register.html"
+      "design_src":"./register.png",
+      "implement_src":"./register.html"
     }
   ]
 }
