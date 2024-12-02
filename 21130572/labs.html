@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/styles/styles.css">
-    <link rel="stylesheet" href="./asset/styles/lab.css">
+    <link rel="stylesheet" href="./asset/styles/labs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="./asset/javascript/w3school.js"></script>
     <title>Tran Van Toan</title>
@@ -22,10 +22,11 @@
                 <li><button type="button" class="lab-select" data-target="lab3">Lab 3</button></li>
                 <li><button type="button" class="lab-select" data-target="lab4">Lab 4</button></li>
                 <li><button type="button" class="lab-select" data-target="lab5">Lab 5</button></li>
+                <li><button type="button" class="lab-select" data-target="lab6">Lab 6</button></li>
             </ul>
         </div>
 
-        <div class="lab-content" id="lab1" style="display: none">
+        <div class="lab-content" id="lab1" style="display: block">
             <h1>Course Edit</h1>
 
             <button type="button" class="new-course">New Course</button>
@@ -195,7 +196,7 @@
             </div>
         </div>
 
-        <div class="lab-content" id="lab4" style="display: block;">
+        <div class="lab-content" id="lab4" style="display: none;">
             <div class="heading">
                 <nav>
                     <a href="#"><i class="fa fa-arrow-left"></i> Home</a>
@@ -330,70 +331,362 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="lab-content" id="lab5" style="display: none;">
-        <p>Lab 5</p>
-    </div>
+        <div class="lab-content" id="lab5" style="display: none;">
+            <div class="heading">My learning</div>
+            <div class="sub-heading">
+                <b>87hr 36min</b> watched <i class="fa-solid fa-circle-info"></i> <a href="#">View all activity</a>
+            </div>
+            <div class="nav">
+                <button data-section="course">All courses</button>
+                <button data-section="path">Learning paths</button>
+                <button data-section="certification">Certifications</button>
+                <button data-section="archived">Archived</button>
+                <button data-section="tools">Learning tools</button>
+            </div>
 
+            <div class="section course" style="display: none;">
+                <p>Course</p>
+            </div>
+
+            <div class="section path" style="display: none;">
+                <p>Path</p>
+            </div>
+
+            <div class="section certification" style="display: block;">
+                <div class="content-section">
+                    <div class="section-header">My badges</div>
+                    <div class="badge-section">
+                        You have earned and uploaded <strong>0 badges</strong> <i class="fa-solid fa-circle-info"></i>
+                        <p>Currently, there are no badges uploaded to your profile. Begin your journey towards your
+                            certification goals or <a href="#">upload your third-party badges</a> to your profile and
+                            impress your manager and peers with your accomplishments. Start preparing for your next
+                            certificate today!</p>
+                        <button class="import-button">Import new badge</button>
+                    </div>
+                </div>
+                <div class="content-section certifications">
+                    <div class="section-header">Certification preparation</div>
+                    <div class="certifications-header">
+                        You are preparing for <strong>4 certifications</strong> <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="certification-list">
+                        <div class="certification-card">
+                            <img src="./asset/images/Oracle_Associates_Badge.png" alt="Oracle Badge">
+                            <div class="certification-title">Oracle Certified Associate, Java SE 8 Programmer</div>
+                            <div class="certification-provider">Oracle</div>
+                        </div>
+                        <div class="certification-card">
+                            <img src="./asset/images/Brightest_CTFL.png" alt="ISTQB Badge">
+                            <div class="certification-title">ISTQB® Certified Tester Foundation Level (CTFL)</div>
+                            <div class="certification-provider">Brightest</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section archived" style="display: none;">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="./asset/images/CSR_Course.png" alt="CSR Course Image">
+                    </div>
+                    <div class="course-info">
+                        <div class="course-title">FPT_Corporate Social Responsibility Training 2024</div>
+                        <div class="course-provider">FSOFT Content Development</div>
+                        <div class="completion-status">100% complete</div>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i> Your rating
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section tools" style="display: none;">
+                <div class="section-header">Learning tools</div>
+                <div class="section-subtext">Explore a diverse range of courses and take advantage of these versatile
+                    tools to gain knowledge, skills, and confidence at your own pace.
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon"><img src="./asset/images/Clock.png" alt="Reminders"></div>
+                        <div>
+                            <div class="tool-title">Learning reminders</div>
+                            <div class="tool-subtext">Set time aside to learn and get reminders using your scheduler.
+                            </div>
+                            <div class="tool-info">You currently have no ongoing reminders.</div>
+                            <a href="#" class="see-more">See more</a>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon"><img src="./asset/images/Person.png" alt="Reflections"></div>
+                        <div>
+                            <div class="tool-title">Reflections <span class="beta-badge">Beta</span></div>
+                            <div class="tool-subtext">Take time to reflect to strengthen your learning.</div>
+                            <div class="tool-info">You have currently no recorded reflections on your learning journey.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lab-content" id="lab6" style="display: none;">
+            <select name="req" id="req" aria-label="req">
+                <option value="req56">Requirement 5 + 6</option>
+                <option value="req7">Requirement 7</option>
+                <option value="req8">Requirement 8</option>
+            </select>
+
+            <div id="req56" style="display: block;">
+                <div class="categories">
+                    <button class="category">Web Development<br>13.3M+ learners</button>
+                    <button class="category">JavaScript<br>17.7M+ learners</button>
+                    <button class="category">React JS<br>7M+ learners</button>
+                    <button class="category">Angular<br>4M+ learners</button>
+                    <button class="category">Java<br>15.5M+ learners</button>
+                    <button class="category">Android Development<br>8M+ learners</button>
+                    <button class="category">iOS Development<br>4M+ learners</button>
+                    <button class="category">CSS<br>9M+ learners</button>
+                </div>
+
+                <div class="courses">
+                    <div class="course">
+                        <img src="./asset/images/web-dev1.jpg" alt="Course">
+                        <h3>The Complete 2024 Web Development Bootcamp</h3>
+                        <p>Dr. Angela Yu, Developer and Lead...</p>
+                        <p class="rating">⭐ 4.7 (409,451)</p>
+                        <p class="price">₫1,699,000</p>
+                        <span class="label">Bestseller</span>
+                    </div>
+
+                    <div class="course info">
+                        <img src="./asset/images/web-dev2.jpg" alt="Course">
+                        <h3>The Web Developer Bootcamp 2024</h3>
+                        <p>Colt Steele</p>
+                        <p class="rating">⭐ 4.7 (276,674)</p>
+                        <p class="price">₫2,399,000</p>
+                        
+                        <div class="course-tooltip">
+                            <strong>The Web Developer Bootcamp 2024</strong>
+                            <p><strong>Updated October 2024</strong></p>
+                            <p>74 total hours • All Levels • Subtitles</p>
+                            <p>10 Hours of React just added. Become a Developer With ONE course - HTML, CSS, JavaScript,
+                                React, Node, MongoDB and More!</p>
+                            <ul>
+                                <li>The ins and outs of HTML5, CSS3, and Modern JavaScript for 2021</li>
+                                <li>Make REAL web applications using cutting-edge technologies</li>
+                                <li>Create responsive, accessible, and beautiful layouts</li>
+                            </ul>
+                            <button class="add">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <div class="course">
+                        <img src="./asset/images/web-dev3.jpg" alt="Course">
+                        <h3>Web Development Masterclass - Online Certification Course</h3>
+                        <p>YouAccel Training</p>
+                        <p class="rating">⭐ 4.3 (10,000)</p>
+                        <p class="price">₫1,499,000</p>
+                    </div>
+
+                    <div class="course">
+                        <img src="./asset/images/web-dev4.jpg" alt="Course">
+                        <h3>Practical Web Development: 22 Courses in 1</h3>
+                        <p>Creative Online School</p>
+                        <p class="rating">⭐ 4.2 (4,353)</p>
+                        <p class="price">₫449,000</p>
+                    </div>
+                </div>
+
+                <button class="more-btn">Show all Web Development courses</button>
+            </div>
+
+            <div id="req7" style="display: none;">
+                <div class="container">
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="./asset/images/hands-on.png" alt="Hands-on Icon">
+                            </div>
+                            <div class="content">
+                                <h2>Hands-on Training</h2>
+                                <p>Upskill effectively with AI-powered coding exercises, practice tests, and quizzes.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="./asset/images/certificate-icon.png" alt="Certification Icon">
+                            </div>
+                            <div class="content">
+                                <h2>Certification Prep</h2>
+                                <p>Prep for industry-recognized certifications by solving real-world challenges and earn
+                                    badges
+                                    along the way.</p>
+                            </div>
+                        </div>
+
+                        <div class="card enterprise">
+                            <div class="card-header">
+                                <img src="./asset/images/insight.png" alt="Insights Icon">
+                            </div>
+                            <div class="content">
+                                <h2>Insights and Analytics</h2>
+                                <p>Fast-track goals with advanced insights plus a dedicated customer success team to
+                                    help drive
+                                    effective learning.</p>
+                                <a href="#">Find out more →</a>
+                            </div>
+                        </div>
+
+                        <div class="card enterprise">
+                            <div class="card-header">
+                                <img src="./asset/images/customization.png" alt="Customizable Icon">
+                            </div>
+                            <div class="content">
+                                <h2>Customizable Content</h2>
+                                <p>Create tailored learning paths for team and organization goals and even host your own
+                                    content
+                                    and
+                                    resources.</p>
+                                <a href="#">Find out more →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <img src="./asset/images/Containerization.png" alt="Containerization" class="containerization">
+                    </div>
+                </div>
+            </div>
+
+            <div id="req8" style="display: none;">
+                <div class="header">
+                    <div class="logo">
+                        <img src="./asset/images/CoderByte.png" alt="Coderbyte Logo">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Developers</a></li>
+                            <li><a href="#">Organizations</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <section class="hero">
+                    <div class="background left">
+                        <img src="./asset/images/left-side.png" alt="#">
+                    </div>
+
+                    <div class="hero-content">
+                        <h2><span class="green">Evaluate Candidates</span> Quickly, Affordably, and Accurately</h2>
+                        <p>The #1 platform for technical assessments, interviews, and projects. Get unlimited candidates
+                            and admins on every plan.</p>
+                        <form>
+                            <input type="email" placeholder="Work email address">
+                            <button>Start Trial</button>
+                        </form>
+                        <a>Learn More</a>
+                    </div>
+
+                    <div class="background right">
+                        <img src="./asset/images/right-side.png" alt="#">
+                    </div>
+                </section>
+            </div>
+
+        </div>
     </div>
 
     <div w3-include-html="footer.html"></div>
-</body>
 
-<script>
-    function setCurrentDate() {
-        const today = new Date().toISOString().slice(0, 10); // Format: YYYY-MM-DD
-        document.getElementById('createdAt').value = today;
-        document.getElementById('updatedAt').value = today;
-    }
+    <script>
+        function setCurrentDate() {
+            const today = new Date().toISOString().slice(0, 10); // Format: YYYY-MM-DD
+            document.getElementById('createdAt').value = today;
+            document.getElementById('updatedAt').value = today;
+        }
 
-    window.onload = function () {
-        setCurrentDate();
-    };
-    includeHTML();
+        window.onload = function () {
+            setCurrentDate();
+        };
+        includeHTML();
 
-    const buttons = document.querySelectorAll('.lab-select');
-    const labs = document.querySelectorAll('.lab-content');
+        const buttons = document.querySelectorAll('.lab-select');
+        const labs = document.querySelectorAll('.lab-content');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            const targetLab = button.getAttribute('data-target');
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const targetLab = button.getAttribute('data-target');
 
-            labs.forEach(lab => {
-                lab.style.display = 'none';
+                labs.forEach(lab => {
+                    lab.style.display = 'none';
+                });
+
+                document.getElementById(targetLab).style.display = 'block';
+                document.getElementById(targetLab)
             });
-
-            document.getElementById(targetLab).style.display = 'block';
-            document.getElementById(targetLab)
         });
-    });
 
-    document.getElementById('login-btn').addEventListener('click', function () {
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('dashboard-container').style.display = 'block';
-    });
-    document.getElementById('logout-btn').addEventListener('click', function () {
-        document.getElementById('login-container').style.display = 'block';
-        document.getElementById('dashboard-container').style.display = 'none';
-    });
-
-    const viewButtons = document.querySelectorAll('.material-card button');
-    const materialSection = document.querySelector('.material');
-    const materialContentSection = document.querySelector('.material-content');
-    const backButton = document.querySelector('.back-button');
-
-    viewButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            materialSection.style.display = 'none';
-            materialContentSection.style.display = 'block';
+        document.getElementById('login-btn').addEventListener('click', function () {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('dashboard-container').style.display = 'block';
         });
-    });
+        document.getElementById('logout-btn').addEventListener('click', function () {
+            document.getElementById('login-container').style.display = 'block';
+            document.getElementById('dashboard-container').style.display = 'none';
+        });
 
-    backButton.addEventListener('click', () => {
-        materialContentSection.style.display = 'none';
-        materialSection.style.display = 'block';
-    });
-</script>
+        const viewButtons = document.querySelectorAll('.material-card button');
+        const materialSection = document.querySelector('.material');
+        const materialContentSection = document.querySelector('.material-content');
+        const backButton = document.querySelector('.back-button');
+
+        viewButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                materialSection.style.display = 'none';
+                materialContentSection.style.display = 'block';
+            });
+        });
+
+        backButton.addEventListener('click', () => {
+            materialContentSection.style.display = 'none';
+            materialSection.style.display = 'block';
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const navButtons = document.querySelectorAll(".nav button");
+            const sections = document.querySelectorAll(".section");
+
+            sections.forEach(section => section.style.display = "none");
+            document.querySelector(".certification").style.display = "block";
+
+            navButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    sections.forEach(section => section.style.display = "none");
+
+                    const targetSection = document.querySelector(`.${button.getAttribute("data-section")}`);
+                    if (targetSection) {
+                        targetSection.style.display = "block";
+                    }
+                });
+            });
+        });
+
+        document.getElementById("req").addEventListener("change", function () {
+            var selectedReq = this.value;
+
+            document.getElementById("req56").style.display = "none";
+            document.getElementById("req7").style.display = "none";
+            document.getElementById("req8").style.display = "none";
+
+            document.getElementById(selectedReq).style.display = "block";
+        });
+    </script>
+</body>
 
 </html>
