@@ -138,3 +138,7 @@ function loadContentRecommendPlaylist(){
         });
     });
 }
+
+function loadYourLibrary(){
+    $('#your_library').load('homepage/your_library.html')
+}
