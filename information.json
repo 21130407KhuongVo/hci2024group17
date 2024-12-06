@@ -22,6 +22,14 @@
         {
           "description": "Tạo trang group_diary, projects",
           "assessment": 100
+        },
+        {
+          "description": "Chỉnh sửa lại giao diện của trang chủ",
+          "assessment": 100
+        },
+        {
+          "description": "Bổ sung source các file media, chỉnh sửa, bổ sung thêm các field trong file json",
+          "assessment": 100
         }
       ]
     },
@@ -176,6 +184,17 @@
       "status": "Hoàn thành",
       "design_src": "./register.png",
       "implement_src": "./register.html"
+    },
+    {
+      "id_requirement": 6,
+      "function": "Chỉnh sửa giao diện trang chủ cho nhóm",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "23/11/2024 - 06/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./homepage_update.png",
+      "implement_src": "./index.html"
     }
   ],
   "medias": [
