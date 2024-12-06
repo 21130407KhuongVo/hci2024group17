@@ -209,7 +209,7 @@
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hoàn thành",
       "design_src": "./setting.png",
-      "implement_src": "/settings/settings.html"
+      "implement_src": "./settings/settings.html"
     }
   ],
   "medias": [

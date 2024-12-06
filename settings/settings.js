@@ -1,13 +1,13 @@
 function setHeader() {
-    $("#navigation").load("/header.html");
+    $("#navigation").load("../header.html");
 }
 
 function setFooter() {
-    $("#footer").load("/footer.html");
+    $("#footer").load("../footer.html");
 }
 
 function loadYourLibrary() {
-    $('#your_library').load('/homepage/your_library.html')
+    $('#your_library').load('../homepage/your_library.html')
 }
 
 function renderSelect(title, subTitle, options) {
