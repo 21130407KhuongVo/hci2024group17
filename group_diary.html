@@ -1,205 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team 17 | Group diary</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team 17 | Group diary</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <!--    Iconify Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
+</head>
 
-  <body>
-    <style>
-      div.box-img {
-        width: 100%;
-        max-height: 350px;
-        overflow-y: hidden;
-      }
+<body>
+  <style>
+    div.box-img {
+      width: 100%;
+      max-height: 350px;
+      overflow-y: hidden;
+    }
 
-      div.card img {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-      }
+    div.card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
 
-      div.card-body div.box-text {
-        height: 50px;
-        /* border: 1px brown solid; */
-        overflow: auto;
-        justify-content: center;
-      }
-    </style>
-    <div class="wrapper">
-      <div
-        class="container-fluid shadow-sm sticky-top"
-        style="background-color: #e3f2fd"
-      >
-        <div id="navigation"></div>
-      </div>
-      <!-- End Navigation Bar-->
-
-      <div class="container main my-5">
-        <ul id="weekTabs" class="nav nav-tabs"></ul>
-
-        <table id="groupDiaryTable" class="table">
-          <thead>
-            <tr>
-              <th scope="col">Mã số sinh viên</th>
-              <th scope="col">Họ và tên</th>
-              <th scope="col">Nhiệm vụ</th>
-              <th scope="col">Đánh giá</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-
-      <footer
-        class="text-center text-lg-start text-white"
-        style="background-color: #1c2331"
-      >
-        <div id="footer"></div>
-      </footer>
-      <!-- End Footer -->
+    div.card-body div.box-text {
+      height: 50px;
+      /* border: 1px brown solid; */
+      overflow: auto;
+      justify-content: center;
+    }
+  </style>
+  <div class="wrapper">
+    <div class="container-fluid shadow-sm sticky-top" style="background-color: #e3f2fd">
+      <div id="navigation"></div>
     </div>
-    <script>
-      $(document).ready(function () {
-        // Kiểm tra trạng thái đăng nhập từ localStorage
-        if (!localStorage.getItem("loggedIn")) {
-          // Nếu chưa đăng nhập, điều hướng tới trang đăng nhập
-          window.location.href = "SignIn.html";
-        }
+    <!-- End Navigation Bar-->
 
-        $.getJSON("information.json", function (data) {
-          setHeader();
-          setFooter();
+    <div class="container main my-5">
+      <ul id="weekTabs" class="nav nav-tabs"></ul>
 
-          let users = data.users;
+      <table id="groupDiaryTable" class="table">
+        <thead>
+          <tr>
+            <th scope="col">Mã số sinh viên</th>
+            <th scope="col">Họ và tên</th>
+            <th scope="col">Nhiệm vụ</th>
+            <th scope="col">Đánh giá</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
-          // Tạo tab tuần
-          createWeekTabs(users);
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+      <div id="footer"></div>
+    </footer>
+    <!-- End Footer -->
+  </div>
+  <script>
+    $(document).ready(function () {
+      // Kiểm tra trạng thái đăng nhập từ localStorage
+      if (!localStorage.getItem("loggedIn")) {
+        // Nếu chưa đăng nhập, điều hướng tới trang đăng nhập
+        window.location.href = "SignIn.html";
+      }
 
-          // Hiển thị dữ liệu tuần đầu tiên
-          renderGroupDiaryTable(users, 1);
+      $.getJSON("information.json", function (data) {
+        setHeader();
+        setFooter();
 
-          // Thiết lập sự kiện click cho các tab
-          setupTabClickHandler(users);
-        });
+        let users = data.users;
 
-        function setHeader() {
-          $("#navigation").load("header.html");
-        }
+        // Tạo tab tuần
+        createWeekTabs(users);
 
-        function setFooter() {
-          $("#footer").load("footer.html");
-        }
+        // Hiển thị dữ liệu tuần đầu tiên
+        renderGroupDiaryTable(users, 1);
 
-        function createWeekTabs(users) {
-          // Tìm tuần cao nhất có trong group_diary
-          let maxWeek = users.reduce((max, user) => {
-            // Kiểm tra nếu group_diary là mảng, nếu không, trả về max hiện tại
-            if (Array.isArray(user.group_diary)) {
-              return Math.max(max, user.group_diary.length);
-            }
-            return max;
-          }, 1);
+        // Thiết lập sự kiện click cho các tab
+        setupTabClickHandler(users);
+      });
 
-          // Tạo các tab tuần
-          let tabList = "";
-          for (let i = 1; i <= maxWeek; i++) {
-            tabList += `<li class="nav-item">
-            <a class="nav-link ${
-              i === 1 ? "active" : ""
+      function setHeader() {
+        $("#navigation").load("header.html");
+      }
+
+      function setFooter() {
+        $("#footer").load("footer.html");
+      }
+
+      function createWeekTabs(users) {
+        // Tìm tuần cao nhất có trong group_diary
+        let maxWeek = users.reduce((max, user) => {
+          // Kiểm tra nếu group_diary là mảng, nếu không, trả về max hiện tại
+          if (Array.isArray(user.group_diary)) {
+            return Math.max(max, user.group_diary.length);
+          }
+          return max;
+        }, 1);
+
+        // Tạo các tab tuần
+        let tabList = "";
+        for (let i = 1; i <= maxWeek; i++) {
+          tabList += `<li class="nav-item">
+            <a class="nav-link ${i === 1 ? "active" : ""
             }" href="#" data-week="${i}">Tuần ${i}</a>
         </li>`;
-          }
-
-          // Chỉ gắn vào HTML của `weekTabs`
-          $("#weekTabs").html(tabList);
         }
 
-        function setupTabClickHandler(users) {
-          // Sử dụng selector đặc biệt để chỉ chọn các tab trong `weekTabs`
-          $("#weekTabs").on("click", ".nav-link", function (event) {
-            event.preventDefault();
+        // Chỉ gắn vào HTML của `weekTabs`
+        $("#weekTabs").html(tabList);
+      }
 
-            // Bỏ class 'active' khỏi tất cả các tab trong `weekTabs` và thêm vào tab được chọn
-            $("#weekTabs .nav-link").removeClass("active");
-            $(this).addClass("active");
+      function setupTabClickHandler(users) {
+        // Sử dụng selector đặc biệt để chỉ chọn các tab trong `weekTabs`
+        $("#weekTabs").on("click", ".nav-link", function (event) {
+          event.preventDefault();
 
-            // Lấy tuần hiện tại từ tab
-            let selectedWeek = parseInt($(this).data("week"));
+          // Bỏ class 'active' khỏi tất cả các tab trong `weekTabs` và thêm vào tab được chọn
+          $("#weekTabs .nav-link").removeClass("active");
+          $(this).addClass("active");
 
-            // Cập nhật bảng theo tuần được chọn
-            renderGroupDiaryTable(users, selectedWeek);
-          });
-        }
+          // Lấy tuần hiện tại từ tab
+          let selectedWeek = parseInt($(this).data("week"));
 
-        function renderGroupDiaryTable(users, week) {
-          let tableContent = "";
+          // Cập nhật bảng theo tuần được chọn
+          renderGroupDiaryTable(users, selectedWeek);
+        });
+      }
 
-          users.forEach((user) => {
-            // Nếu không có `group_diary` hoặc tuần yêu cầu không có dữ liệu, dùng giá trị mặc định
-            let diaryEntry = (user.group_diary &&
-              user.group_diary[week - 1]) || { description: "", assessment: 0 };
-            console.log(
-              `user: ${user.id}, name: ${user.fullname}, diaryEntry: `,
-              diaryEntry
-            ); // Log thông tin từng user
+      function renderGroupDiaryTable(users, week) {
+        let tableContent = "";
 
-            tableContent += `<tr>
+        users.forEach((user) => {
+          // Nếu không có `group_diary` hoặc tuần yêu cầu không có dữ liệu, dùng giá trị mặc định
+          let diaryEntry = (user.group_diary &&
+            user.group_diary[week - 1]) || { description: "", assessment: 0 };
+          console.log(
+            `user: ${user.id}, name: ${user.fullname}, diaryEntry: `,
+            diaryEntry
+          ); // Log thông tin từng user
+
+          tableContent += `<tr>
                             <td>${user.id}</td>
                             <td>${user.fullname}</td>
-                            <td>${
-                              !diaryEntry.description
-                                ? ""
-                                : diaryEntry.description
-                            }</td>
+                            <td>${!diaryEntry.description
+              ? ""
+              : diaryEntry.description
+            }</td>
                             <td>
-                              <div class="progress" role="progressbar" aria-valuenow="${
-                                diaryEntry.assessment
-                              }" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
-                                  <div class="progress-bar" style="width: ${
-                                    diaryEntry.assessment
-                                  }%"></div>
+                              <div class="progress" role="progressbar" aria-valuenow="${diaryEntry.assessment
+            }" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                  <div class="progress-bar" style="width: ${diaryEntry.assessment
+            }%"></div>
                               </div>
                           </td>
                         </tr>`;
-          });
+        });
 
-          // Gắn vào HTML của bảng
-          $("#groupDiaryTable tbody").html(tableContent);
-        }
-      });
-    </script>
+        // Gắn vào HTML của bảng
+        $("#groupDiaryTable tbody").html(tableContent);
+      }
+    });
+  </script>
 
-    <script>
-      const tooltipTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="tooltip"]'
-      );
-      const tooltipList = [...tooltipTriggerList].map(
-        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-      );
-    </script>
-  </body>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="tooltip"]'
+    );
+    const tooltipList = [...tooltipTriggerList].map(
+      (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+    );
+  </script>
+</body>
+
 </html>

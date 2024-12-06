@@ -125,7 +125,7 @@ function loadContentRecommendPlaylist(){
             let mediaCard = `
             <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
                 <div class="card">
-                    <img src="images/Covers/${media.cover_image}" class="card-img-top" alt="${media.title}">
+                    <img src="images/Covers/${media.cover_image}" class="card-img-top" alt="${media.title}" loading="lazy">
                     <div class="card-body d-flex flex-column">
                         <a href="${media.spotify_url}" class="card-title link-underline link-underline-dark">${media.title}</a>
                         <a href="#" class="card-text">${media.artist}</a>
