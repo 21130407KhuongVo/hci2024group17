@@ -34,6 +34,10 @@
         {
           "description": "Tạo trang setting",
           "assessment": 100
+        },
+        {
+          "description": "Bổ sung source các file media, chỉnh sửa, bổ sung thêm các field trong file json",
+          "assessment": 100
         }
       ]
     },
@@ -209,7 +213,29 @@
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hoàn thành",
       "design_src": "./setting.png",
-      "implement_src": "./settings/settings.html"
+      "implement_src": "./settings.html"
+    },
+    {
+      "id_requirement": 8,
+      "function": "Tạo khung trái (trang thư viện nhạc) cho trang chủ",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "23/11/2024 - 06/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./your_library.png",
+      "implement_src": "./homepage/your_library.html"
+    },
+    {
+      "id_requirement": 9,
+      "function": "Tạo khung cho bài hát ở trang chủ",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "23/11/2024 - 06/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./recomment_playlist.png",
+      "implement_src": "./homepage/recomment_playlist.html"
     }
   ],
   "medias": [

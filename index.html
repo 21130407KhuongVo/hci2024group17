@@ -81,8 +81,10 @@
                 window.location.href = "SignIn.html";
             }
 
+            const baseURL = getBaseURL()
+
             // load header and footer
-            setHeader();
+            setHeader(baseURL, "nav_home")
             setFooter();
 
             // load your library
@@ -90,22 +92,15 @@
 
             // load recommend playlist
             loadRecommendPlaylist()
-            loadContentRecommendPlaylist()
+            loadContentRecommendPlaylist(getBaseURL())
 
             // load members
             loadMembers()
 
-            function setHeader() {
-                $("#navigation").load("header.html");
-            }
-
-            function setFooter() {
-                $("#footer").load("footer.html");
-            }
-
         });
     </script>
 
+    <script src="main.js"></script>
     <script src="homepage/homepage_javascript.js"></script>
 
     <script>
