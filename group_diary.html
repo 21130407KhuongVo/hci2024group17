@@ -80,8 +80,6 @@
       }
 
       $.getJSON("information.json", function (data) {
-        setHeader();
-        setFooter();
 
         let users = data.users;
 
@@ -95,9 +93,8 @@
         setupTabClickHandler(users);
       });
 
-      function setHeader() {
-        $("#navigation").load("header.html");
-      }
+      setHeader(getBaseURL(),"nav_group_diary")
+        setFooter(); 
 
       function setFooter() {
         $("#footer").load("footer.html");
@@ -177,6 +174,8 @@
       }
     });
   </script>
+
+<script src="main.js"></script>
 
   <script>
     const tooltipTriggerList = document.querySelectorAll(
