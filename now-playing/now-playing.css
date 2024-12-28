@@ -73,6 +73,14 @@
     transition: .3s linear;
 }
 
+.master_play .icon .bi:nth-child(3) {
+    border: 1px solid rgb(105, 105, 170, .1);
+    border-radius: 50%;
+    padding: 1px 5px 0px 6px;
+    margin: 0px 5px;
+    transition: .3s linear;
+}
+
 .master_play span {
     width: 32px;
     font-size: 11px;
