@@ -51,6 +51,8 @@ async function setHeader(baseURL, selected) {
                         <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                     </ul>
                 </div>
+
+                
             </div>
         </header>
     `;
