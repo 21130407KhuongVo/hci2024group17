@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <content>
     <style>
         .playlist-item {
@@ -35,9 +36,8 @@
         <h2 class="text-center mb-4">Your Library</h2>
         <div class="row">
             <div class="col-md-12">
-                <div class="playlist-item">
+                <!-- <div class="playlist-item" onclick="location.href='../playlist-page.html'">
                     <img src="https://placehold.co/50x50" alt="Playlist Image" class="playlist-item-image">
-                    <!-- <iconify-icon icon="ph:image-square" width="50" height="50" class="playlist-item-image"></iconify-icon> -->
                     <div>
                         <h3 class="mb-0 playlist-item-title">Liked Songs</h3>
                         <p class="mb-0 playlist-item-info">1 song</p>
@@ -56,8 +56,52 @@
                         <h3 class="mb-0 playlist-item-title">Top Hits</h3>
                         <p class="mb-0 playlist-item-info">20 songs</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            const jsonFilePath = 'information.json';
+    
+            // Fetch album data
+            $.getJSON(jsonFilePath, function (data) {
+                const albumSet = new Set();
+                const albumDetails = {};
+    
+                data.medias.forEach(media => {
+                    const { album, artist, thumbnail } = media;
+                    if (!albumSet.has(album)) {
+                        albumSet.add(album);
+                        albumDetails[album] = {
+                            artist: artist,
+                            thumbnail: thumbnail || 'https://placehold.co/50x50',
+                        };
+                    }
+                });
+    
+                // Populate albums
+                albumSet.forEach(album => {
+                    const albumData = albumDetails[album];
+                    const albumElement = `
+                        <div class="playlist-item" data-album="${album}" onclick="navigateToPlaylist('${album}')">
+                            <img src="${albumData.thumbnail}" alt="${album}" class="playlist-item-image">
+                            <div>
+                                <h3 class="mb-0 playlist-item-title">${album}</h3>
+                                <p class="mb-0 playlist-item-info">${albumData.artist}</p>
+                            </div>
+                        </div>
+                    `;
+                    $('.row .col-md-12').append(albumElement);
+                });
+            });
+    
+            // Navigate to playlist page with album as query parameter
+            window.navigateToPlaylist = function (album) {
+                const albumEncoded = encodeURIComponent(album);
+                location.href = `playlist-page.html?album=${albumEncoded}`;
+            };
+        });
+    </script>
 </content>

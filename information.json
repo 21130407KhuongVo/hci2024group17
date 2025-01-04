@@ -236,6 +236,28 @@
       "status": "Hoàn thành",
       "design_src": "./recomment_playlist.png",
       "implement_src": "./homepage/recomment_playlist.html"
+    },
+    {
+      "id_requirement": 10,
+      "function": "Tạo thanh media để có thể mở các bài nhạc",
+      "proposer": "21130407",
+      "designer": "21130572",
+      "implementer": "21130572",
+      "estimated_time": "27/11/2024 - 29/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./now-playing-bar.png",
+      "implement_src": "./index.html"
+    },
+    {
+      "id_requirement": 11,
+      "function": "Hoàn thiện trang thư viện nhạc",
+      "proposer": "21130407",
+      "designer": "21130572",
+      "implementer": "21130572",
+      "estimated_time": "30/11/2024 - 3/1/2024",
+      "status": "Hoàn thành",
+      "design_src": "./playlist-page.png",
+      "implement_src": "./playlist-page.html"
     }
   ],
   "medias": [
@@ -324,7 +346,7 @@
       "duration": 180,
       "genre": "Unknown",
       "cover_image": "monkey_dance_cover.jpeg",
-      "preview_url": "mokey-dance.mp3",
+      "preview_url": "dance-monkey.mp3",
       "spotify_url": "Unknown",
       "producers": [
         "uuid-6"

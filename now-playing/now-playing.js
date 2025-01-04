@@ -6,23 +6,33 @@ $(document).ready(function () {
     // Fetch data from information.json
     $.getJSON('information.json', function (data) {
         songs = data.medias;
+        console.log(songs);
 
-        // Initialize the first song
+        // Get songIndex from the URL (if it exists)
+        const urlParams = new URLSearchParams(window.location.search);
+        const songIndexFromURL = urlParams.get('songIndex');
+        console.log(songIndexFromURL);
+
+        // If songIndex exists in the URL, use it. Otherwise, default to the first song (index 0)
+        if (songIndexFromURL !== null) {
+            currentSongIndex = parseInt(songIndexFromURL, 10);
+        }
+        // Initialize the song (update the media bar and start the song)
         setSong(currentSongIndex);
     });
 
     // Function to set song details and load audio
-    function setSong(index) {
-        const song = songs[index];
-        if (!song) return;
+    window.setSong = function setSong(index) {
+        song = songs[index];
 
-        // Update song details
-        $('#poster_master_play').attr('src', 'images/Covers/' + song.cover_image);
+        // Update song details in the media bar
+        $('#poster_master_play').attr('src', '../images/Covers/' + song.cover_image);
         $('#title').html(`${song.title}<br><div id="artist" class="subtitle">${song.artist}</div>`);
 
         // Set audio source and load the audio
         audio.src = 'medias/' + song.preview_url;
         audio.load();
+        audio.play();
 
         // Update duration
         const duration = formatTime(song.duration);
@@ -34,6 +44,7 @@ $(document).ready(function () {
         $('#currentStart').text('0:00');
         $('#bar2').css('width', '0%');
         $('.dot').css('left', '0%');
+        $('#play').removeClass('d-none');
     }
 
     // Format time from seconds to minutes:seconds
@@ -56,19 +67,24 @@ $(document).ready(function () {
         $('#play').removeClass('d-none');
     });
 
-    // Next and Previous song
+    // Next song
     $('#forward').click(function () {
+        audio.pause(); // Stop the current song before moving to the next
+        audio.currentTime = 0; // Reset to the start of the song
         currentSongIndex = (currentSongIndex + 1) % songs.length;
         setSong(currentSongIndex);
-        audio.play();
+        audio.play(); // Play the next song
         $('#play').addClass('d-none');
         $('#pause').removeClass('d-none');
     });
 
+    // Previous song
     $('#rewind').click(function () {
+        audio.pause(); // Stop the current song before moving to the previous
+        audio.currentTime = 0; // Reset to the start of the song
         currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
         setSong(currentSongIndex);
-        audio.play();
+        audio.play(); // Play the previous song
         $('#play').addClass('d-none');
         $('#pause').removeClass('d-none');
     });
