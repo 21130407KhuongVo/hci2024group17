@@ -9,7 +9,7 @@ async function setHeader(baseURL, selected) {
         <header class="d-flex justify-content-between align-items-center py-3">
             <div class="w-25">
                 <a href="${baseURL}index.html" class="d-flex align-items-center">
-                    <img src="${baseURL}images/FIT_logo.png" alt="Logo" width="50">
+                    <img src="${baseURL}assets/images/FIT_logo.png" alt="Logo" width="50">
                 </a>
             </div>
 
@@ -18,6 +18,8 @@ async function setHeader(baseURL, selected) {
                 <li class="nav-item"><a href="#" id="nav_about" class="nav-link disabled">About</a></li>
                 <li class="nav-item"><a href="${baseURL}group_diary.html" id="nav_group_diary" class="nav-link">Group diary</a></li>
                 <li class="nav-item"><a href="${baseURL}projects.html" id="nav_projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="${baseURL}style_guide.html" id="nav_style_guide" class="nav-link">Style guide</a></li>
+                <li class="nav-item"><a href="${baseURL}resutl.html" id="nav_result" class="nav-link">Result</a></li>
             </ul>
 
             <div class="d-flex align-items-center justify-content-between w-25">
