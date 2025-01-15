@@ -1,3 +1,11 @@
+async function setHeader(loading) {
+    loading = $('#navigation').load('../../components/header.html', function(){
+        const selected = "nav_home"
+        setHeader(selected)
+    })
+    return loading
+}
+
 function renderMember(users) {
     const parent = $("div#member");
     $.each(users, function (index, user) {
