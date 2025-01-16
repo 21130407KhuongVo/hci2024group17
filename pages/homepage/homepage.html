@@ -64,8 +64,8 @@
                     <div id="recommend_playlist" class="mb-4"></div>
                     <!-- End recommend_playlist -->
 
-                    <h2 class="text-start mb-1">My teams</h2>
-                    <div id="member" class="row overflow-x-auto flex-nowrap"></div>
+                    <!-- <h2 class="text-start mb-1">My teams</h2>
+                    <div id="member" class="row overflow-x-auto flex-nowrap"></div> -->
                     <!-- End Teammate Introduction-->
                 </div>
             </div>
@@ -123,15 +123,15 @@
 
             // // load header and footer
             // setHeader(baseURL, "nav_home")
-            setHeader(loading)
-            // setFooter();
+            setHeader()
+            setFooter();
 
             // load your library
             loadYourLibrary()
 
             // load recommend playlist
             loadRecommendPlaylist()
-            // loadContentRecommendPlaylist(getBaseURL())
+            loadContentRecommendPlaylist()
 
             // load members
             loadMembers()
