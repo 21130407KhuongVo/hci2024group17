@@ -28,48 +28,21 @@
 </head>
 
 <body>
+
     <style>
-        div.box-img {
-            width: 100%;
-            max-height: 350px;
-            overflow-y: hidden;
-        }
-
-        div.card img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-        }
-
-        div.card-body div.box-text {
-            height: 50px;
-            /* border: 1px brown solid; */
-            overflow: auto;
-            justify-content: center;
+        button.category {
+            width: 100px;
+            text-align: center;
         }
     </style>
+
     <div class="wrapper">
         <div class="container-fluid shadow-sm sticky-top" style="background-color: #e3f2fd">
             <div id="navigation"></div>
         </div>
         <!-- End Navigation Bar-->
 
-        <div class="container-fluid mt-4 mb-5">
-            <div class="row">
-                <div id="content-left" class="col-md-2 border-end border-2">
-                    <div id="your_library" class="h-100"></div>
-                </div>
-                <div id="content-midle" class="col-md-10">
-
-                    <div id="recommend_playlist" class="mb-4"></div>
-                    <!-- End recommend_playlist -->
-
-                    <!-- <h2 class="text-start mb-1">My teams</h2>
-                    <div id="member" class="row overflow-x-auto flex-nowrap"></div> -->
-                    <!-- End Teammate Introduction-->
-                </div>
-            </div>
-        </div>
+        <div id="panel"></div>
 
         <div id="master_play" class="master_play">
             <div class="wave">
@@ -119,22 +92,12 @@
                 window.location.href = "../SignIn.html";
             }
 
-            // const baseURL = getBaseURL()
-
-            // // load header and footer
-            // setHeader(baseURL, "nav_home")
+            // load header and footer
             setHeader()
             setFooter();
 
-            // load your library
-            loadYourLibrary()
-
-            // load recommend playlist
-            loadRecommendPlaylist()
-            loadContentRecommendPlaylist()
-
-            // load members
-            loadMembers()
+            setPanel();
+            setPlaylist();
 
         });
     </script>
