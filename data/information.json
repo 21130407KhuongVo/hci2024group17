@@ -1,0 +1,478 @@
+{
+  "users": [
+    {
+      "id": 21130407,
+      "username": "khuongvo2105",
+      "fullname": "Võ Nguyễn Nhật Khương",
+      "birthday": "2003-05-21",
+      "github": "21130407KhuongVo",
+      "facebook": "vo.kevin.777/",
+      "linkedin": "khuongvo-is-me/",
+      "avatar": "NhatKhuong.jpg",
+      "role": "admin",
+      "email": "21130407@st.hcmuaf.edu.vn",
+      "password": "21052003",
+      "createAt": "2024-09-21",
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "Tạo repository, deploy github page",
+          "assessment": 100
+        },
+        {
+          "description": "Tạo trang group_diary, projects",
+          "assessment": 100
+        },
+        {
+          "description": "Chỉnh sửa lại giao diện của trang chủ",
+          "assessment": 100
+        },
+        {
+          "description": "Bổ sung source các file media, chỉnh sửa, bổ sung thêm các field trong file json",
+          "assessment": 100
+        },
+        {
+          "description": "Tạo trang setting",
+          "assessment": 100
+        },
+        {
+          "description": "Bổ sung source các file media, chỉnh sửa, bổ sung thêm các field trong file json",
+          "assessment": 100
+        }
+      ]
+    },
+    {
+      "id": 21130425,
+      "username": "",
+      "fullname": "Nguyễn Thanh Hoài Linh",
+      "birthday": "",
+      "github": "nguyenthanhhoailinh",
+      "facebook": "hoailinh.nguyenthanh.7",
+      "linkedin": "",
+      "avatar": "HoaiLinh.jpg",
+      "role": "",
+      "email": "",
+      "password": "",
+      "createAt": "",
+      "context": "developer"
+    },
+    {
+      "id": 21130459,
+      "username": "",
+      "fullname": "Khổng Hữu Nhân",
+      "birthday": "2003-08-22",
+      "github": "k-huunhan",
+      "facebook": "profile.php?id=100079054593761",
+      "linkedin": "",
+      "avatar": "HuuNhan.jpeg",
+      "role": "member",
+      "email": "21130459@st.hcmuaf.edu.vn",
+      "password": "21130459",
+      "createAt": "",
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "",
+          "assessment": 0
+        },
+        {
+          "description": "Tạo trang Register",
+          "assessment": 100
+        }
+      ]
+    },
+    {
+      "id": 21130572,
+      "username": "",
+      "fullname": "Trần Văn Toàn",
+      "birthday": "",
+      "github": "VanToan1912",
+      "facebook": "profile.php?id=100026253393471",
+      "linkedin": "",
+      "avatar": "VanToan.jpeg",
+      "role": "",
+      "email": "",
+      "password": "",
+      "createAt": "",
+      "context": "developer"
+    },
+    {
+      "id": 23130348,
+      "username": "",
+      "fullname": "Trần Minh Trí",
+      "birthday": "",
+      "github": "TriTran119",
+      "facebook": "tri.tran.959",
+      "linkedin": "",
+      "avatar": "loopy1.jpg",
+      "role": "",
+      "email": "",
+      "password": "",
+      "createAt": "",
+      "context": "developer"
+    },
+    {
+      "id": 20130356,
+      "username": "",
+      "fullname": "Phan Thị Quỳnh Như",
+      "birthday": "2002-12-31",
+      "github": "quynhuw",
+      "facebook": "qinhuuuuul",
+      "linkedin": "qinhuuuuu",
+      "avatar": "quynhu.jpg",
+      "role": "",
+      "email": "qinhuuuuu@gmail.com",
+      "password": "",
+      "createAt": "",
+      "context": "developer",
+      "group_diary": [
+        {
+          "description": "",
+          "assessment": 100
+        },
+        {
+          "description": "Tạo trang sign in",
+          "assessment": 100
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id_requirement": 1,
+      "function": "Tạo giao diện trang chủ cho nhóm",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src": "./homepage.png",
+      "implement_src": "./index.html"
+    },
+    {
+      "id_requirement": 2,
+      "function": "Tạo giao diện hiển thị group_diary",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src": "./group_diary.png",
+      "implement_src": "./group_diary.html"
+    },
+    {
+      "id_requirement": 3,
+      "function": "Tạo giao diện hiển thị projects",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src": "./projects_1.png",
+      "implement_src": "./projects.html"
+    },
+    {
+      "id_requirement": 4,
+      "function": "Tạo giao diện Sign in",
+      "proposer": "20130356",
+      "designer": "20130356",
+      "implementer": "20130356",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src": "./sign_in.png",
+      "implement_src": "./SignIn.html"
+    },
+    {
+      "id_requirement": 5,
+      "function": "Tạo giao diện Register",
+      "proposer": "21130459",
+      "designer": "21130459",
+      "implementer": "21130459",
+      "estimated_time": "15/11/2024 - 15/11/2024",
+      "status": "Hoàn thành",
+      "design_src": "./register.png",
+      "implement_src": "./register.html"
+    },
+    {
+      "id_requirement": 6,
+      "function": "Chỉnh sửa giao diện trang chủ cho nhóm",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "23/11/2024 - 06/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./homepage_update.png",
+      "implement_src": "./index.html"
+    },
+    {
+      "id_requirement": 7,
+      "function": "Tạo trang setting",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "23/11/2024 - 06/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./setting.png",
+      "implement_src": "./settings.html"
+    },
+    {
+      "id_requirement": 8,
+      "function": "Tạo khung trái (trang thư viện nhạc) cho trang chủ",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "23/11/2024 - 06/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./your_library.png",
+      "implement_src": "./homepage/your_library.html"
+    },
+    {
+      "id_requirement": 9,
+      "function": "Tạo khung cho bài hát ở trang chủ",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "23/11/2024 - 06/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./recomment_playlist.png",
+      "implement_src": "./homepage/recomment_playlist.html"
+    },
+    {
+      "id_requirement": 10,
+      "function": "Tạo thanh media để có thể mở các bài nhạc",
+      "proposer": "21130407",
+      "designer": "21130572",
+      "implementer": "21130572",
+      "estimated_time": "27/11/2024 - 29/12/2024",
+      "status": "Hoàn thành",
+      "design_src": "./now-playing-bar.png",
+      "implement_src": "./index.html"
+    },
+    {
+      "id_requirement": 11,
+      "function": "Hoàn thiện trang thư viện nhạc",
+      "proposer": "21130407",
+      "designer": "21130572",
+      "implementer": "21130572",
+      "estimated_time": "30/11/2024 - 3/1/2024",
+      "status": "Hoàn thành",
+      "design_src": "./playlist-page.png",
+      "implement_src": "./playlist-page.html"
+    }
+  ],
+  "medias": [
+    {
+      "id_media": 1,
+      "title": "Bad Guy",
+      "artist": "Billie Eilish",
+      "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+      "release_date": "2019-03-29",
+      "duration": 194,
+      "genre": "Electropop",
+      "cover_image": "bad_guy_cover.jpeg",
+      "preview_url": "bad-guy.mp3",
+      "spotify_url": "https://open.spotify.com/track/2uN2w2x5V6qYqK6bZz6R4W",
+      "producers": [
+        "uuid-7"
+      ]
+    },
+    {
+      "id_media": 2,
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "album": "÷ (Divide)",
+      "release_date": "2017-01-06",
+      "duration": 263,
+      "genre": "Pop",
+      "cover_image": "shape_of_you_cover.jpeg",
+      "preview_url": "shape-of-u.mp3",
+      "spotify_url": "https://open.spotify.com/track/7qiZfU5d3Z5m4k0YbO2c2G",
+      "producers": [
+        "uuid-1",
+        "uuid-2"
+      ]
+    },
+    {
+      "id_media": 3,
+      "title": "Believer",
+      "artist": "Imagine Dragons",
+      "album": "Evolve",
+      "release_date": "2017-04-14",
+      "duration": 204,
+      "genre": "Rock",
+      "cover_image": "believer_cover.jpeg",
+      "preview_url": "believer.mp3",
+      "spotify_url": "https://open.spotify.com/track/0sNOF9nA1W0fY0cZ8h8l7b",
+      "producers": [
+        "uuid-3"
+      ]
+    },
+    {
+      "id_media": 4,
+      "title": "Despacito",
+      "artist": "Luis Fonsi",
+      "album": "Vida",
+      "release_date": "2019-02-01",
+      "duration": 229,
+      "genre": "Reggaeton",
+      "cover_image": "despacito_cover.jpeg",
+      "preview_url": "despacito.mp3",
+      "spotify_url": "https://open.spotify.com/track/0yG1f4J0f8S2C6c0W3fU4U",
+      "producers": [
+        "uuid-4"
+      ]
+    },
+    {
+      "id_media": 5,
+      "title": "Leyla",
+      "artist": "Mesto",
+      "album": "Leyla",
+      "release_date": "2019",
+      "duration": 210,
+      "genre": "Unknown",
+      "cover_image": "leyla_mesto_cover.jpeg",
+      "preview_url": "leyla-mesto.mp3",
+      "spotify_url": "Unknown",
+      "producers": [
+        "uuid-5"
+      ]
+    },
+    {
+      "id_media": 6,
+      "title": "Dance Monkey",
+      "artist": "Tones and I",
+      "album": "Bravo Hits Vol.107",
+      "release_date": "2019",
+      "duration": 180,
+      "genre": "Unknown",
+      "cover_image": "monkey_dance_cover.jpeg",
+      "preview_url": "dance-monkey.mp3",
+      "spotify_url": "Unknown",
+      "producers": [
+        "uuid-6"
+      ]
+    },
+    {
+      "id_media": 7,
+      "title": "Payphone",
+      "artist": "Maroon 5",
+      "album": "Overexposed",
+      "release_date": "2012-04-16",
+      "duration": 220,
+      "genre": "Pop",
+      "cover_image": "payphone_cover.jpeg",
+      "preview_url": "payphone.mp3",
+      "spotify_url": "https://open.spotify.com/track/1z8g1g1g1g1g1g1g1g1g1g",
+      "producers": [
+        "uuid-7"
+      ]
+    },
+    {
+      "id_media": 8,
+      "title": "See You Again",
+      "artist": "Wiz Khalifa",
+      "album": "Furious 7: Original Motion Picture Soundtrack",
+      "release_date": "2015-03-10",
+      "duration": 320,
+      "genre": "Hip-Hop",
+      "cover_image": "see_you_again_cover.jpeg",
+      "preview_url": "see-u-again.mp3",
+      "spotify_url": "https://open.spotify.com/track/0hP1g1g1g1g1g1g1g1g1g",
+      "producers": [
+        "uuid-8"
+      ]
+    }
+  ],
+  "producers": [
+    {
+      "id": "uuid-1",
+      "fullname": "Steve Mac",
+      "role": "Producer, Songwriter",
+      "email": "stevemac@example.com",
+      "social_media": {
+        "facebook": "stevemacmusic",
+        "twitter": "@stevemac"
+      }
+    },
+    {
+      "id": "uuid-2",
+      "fullname": "Ed Sheeran",
+      "role": "Artist, Producer, Songwriter",
+      "email": "ed.sheeran@example.com",
+      "social_media": {
+        "facebook": "edsheeran",
+        "twitter": "@edsheeran"
+      }
+    },
+    {
+      "id": "uuid-3",
+      "fullname": "Max Martin",
+      "role": "Producer, Songwriter",
+      "email": "maxmartin@example.com",
+      "social_media": {
+        "facebook": "maxmartinmusic",
+        "twitter": "@maxmartin"
+      }
+    },
+    {
+      "id": "uuid-4",
+      "fullname": "Oscar Holter",
+      "role": "Producer, Songwriter",
+      "email": "oscarholter@example.com",
+      "social_media": {
+        "facebook": "oscarholtermusic",
+        "twitter": "@oscarholter"
+      }
+    },
+    {
+      "id": "uuid-5",
+      "fullname": "The Weeknd",
+      "role": "Artist, Producer, Songwriter",
+      "email": "theweeknd@example.com",
+      "social_media": {
+        "facebook": "theweeknd",
+        "twitter": "@theweeknd"
+      }
+    },
+    {
+      "id": "uuid-6",
+      "fullname": "Ian Kirkpatrick",
+      "role": "Producer, Songwriter",
+      "email": "iankirkpatrick@example.com",
+      "social_media": {
+        "facebook": "iankirkpatrickmusic",
+        "twitter": "@iankirkpatrick"
+      }
+    },
+    {
+      "id": "uuid-7",
+      "fullname": "Finneas O'Connell",
+      "role": "Producer, Songwriter",
+      "email": "finneas@example.com",
+      "social_media": {
+        "facebook": "finneas",
+        "twitter": "@finneas"
+      }
+    },
+    {
+      "id": "uuid-8",
+      "fullname": "Tones and I",
+      "role": "Artist, Producer, Songwriter",
+      "email": "tonesandi@example.com",
+      "social_media": {
+        "facebook": "tonesandi",
+        "twitter": "@tonesandi"
+      }
+    },
+    {
+      "id": "uuid-9",
+      "fullname": "Jamie Hartman",
+      "role": "Producer, Songwriter",
+      "email": "jamiehartman@example.com",
+      "social_media": {
+        "facebook": "jamiehartmanmusic",
+        "twitter": "@jamiehartman"
+      }
+    }
+  ]
+}

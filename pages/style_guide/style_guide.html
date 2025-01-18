@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 17 | Style guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- BootStrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="container-fluid shadow-sm sticky-top" style="background-color: #e3f2fd">
+        <div id="navigation"></div>
+    </div>
+    <!-- End Navigation Bar-->
+
+    <div class="container-lg">
+        <div class="row">
+            <!-- <div class="col-2">1</div> -->
+            <!-- <div class="col-10"> -->
+                <div class="col-12">
+                <h1 class="mt-4">Style Guide for Team 17</h1>
+                <p>This style guide outlines the design principles and components to be used in our project, leveraging
+                    Bootstrap 5.3 for a consistent and responsive layout.</p>
+
+                <h2>Color Palette</h2>
+                <ul>
+                    <li><strong>Primary Color:</strong> #007bff (Bootstrap Primary)</li>
+                    <li><strong>Secondary Color:</strong> #6c757d (Bootstrap Secondary)</li>
+                    <li><strong>Success Color:</strong> #28a745 (Bootstrap Success)</li>
+                    <li><strong>Danger Color:</strong> #dc3545 (Bootstrap Danger)</li>
+                    <li><strong>Warning Color:</strong> #ffc107 (Bootstrap Warning)</li>
+                    <li><strong>Info Color:</strong> #17a2b8 (Bootstrap Info)</li>
+                </ul>
+
+                <h2>Typography</h2>
+                <ul>
+                    <li><strong>Headings:</strong> Use Bootstrap's heading classes (h1, h2, h3, etc.) for semantic
+                        structure.</li>
+                    <li><strong>Body Text:</strong> Use <code>class="text-body"</code> for standard body text.</li>
+                    <li><strong>Links:</strong> Use <code>class="link-primary"</code> for primary links.</li>
+                </ul>
+
+                <h2>Buttons</h2>
+                <p>Utilize Bootstrap button classes for consistent styling:</p>
+                <ul>
+                    <li><code>class="btn btn-primary"</code> for primary buttons.</li>
+                    <li><code>class="btn btn-secondary"</code> for secondary buttons.</li>
+                    <li><code>class="btn btn-success"</code> for success buttons.</li>
+                </ul>
+
+                <h2>Forms</h2>
+                <p>Use Bootstrap form classes to ensure proper spacing and alignment:</p>
+                <ul>
+                    <li><code>class="form-control"</code> for input fields.</li>
+                    <li><code>class="form-check"</code> for checkboxes and radio buttons.</li>
+                </ul>
+
+                <h2>JavaScript Components</h2>
+                <p>Incorporate jQuery for dynamic interactions:</p>
+                <ul>
+                    <li>Use <code>$(document).ready(function() { ... });</code> to ensure scripts run after the DOM is
+                        fully loaded.</li>
+                    <li>Utilize Bootstrap's JavaScript components like modals and dropdowns for enhanced user
+                        experience.</li>
+                </ul>
+
+                <h2>Responsive Design</h2>
+                <p>Ensure all components are responsive by using Bootstrap's grid system and utility classes.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            setHeader()
+        })
+    </script>
+
+    <script src="style_guide.js"></script>
+</body>
+
+</html>
