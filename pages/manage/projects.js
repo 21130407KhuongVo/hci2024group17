@@ -99,11 +99,17 @@ function setRequirements(requirements, users) {
     });
 }
 
+let reqImages = []; // Khai báo biến để lưu trữ đường dẫn hình ảnh
+
 // Hàm để load các tab Design
 function loadDesignTab(requirements) {
     let accordionHTML = "";
     requirements.forEach((requirement) => {
         if (requirement.design_src && Array.isArray(requirement.design_src)) {
+
+            // Thêm các đường dẫn hình ảnh vào reqImages
+            reqImages.push(...requirement.design_src.map(src => `../../assets/images/requirements/${src}`));
+
             accordionHTML += `
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="heading${requirement.id_requirement}">
@@ -154,3 +160,31 @@ window.loadCodeForModal = function (src) {
             console.log("Lỗi khi tải file:", src);
         });
 };
+
+// Hàm để tải xuống tất cả các file ảnh
+async function downloadImages() {
+    const zip = new JSZip();
+    const folder = zip.folder("design_images"); // Tạo một thư mục trong ZIP
+
+    // Lặp qua từng đường dẫn hình ảnh trong reqImages
+    for (const imgSrc of reqImages) {
+        const imgName = imgSrc.split('/').pop(); // Lấy tên file ảnh
+
+        // Fetch ảnh và thêm vào ZIP
+        await fetch(imgSrc)
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.blob();
+            })
+            .then(blob => {
+                folder.file(imgName, blob); // Thêm file vào thư mục
+            })
+            .catch(error => console.error('Error fetching image:', error));
+    }
+
+    // Đợi cho tất cả các ảnh được thêm vào ZIP
+    const zipContent = await zip.generateAsync({ type: "blob" });
+
+    // Tải xuống file ZIP
+    saveAs(zipContent, "design_images.zip");
+}

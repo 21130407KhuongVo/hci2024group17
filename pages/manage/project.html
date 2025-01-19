@@ -22,6 +22,9 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Thêm các thư viện JSZip và FileSaver.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 
 <body>
@@ -88,7 +91,13 @@
 
         <!-- Design Tab -->
         <div id="design" class="tab-pane fade">
-          <h4>Project Design</h4>
+          <div class="d-flex justify-content-between align-items-center">
+            <h4>Project Design</h4>
+            <a href="#" id="downloadImages">
+              <iconify-icon icon="iconoir:download-circle-solid" width="40" height="40"
+                style="color: #28a745"></iconify-icon>
+            </a>
+          </div>
           <p>Below are the design sketches of the project functionalities.</p>
           <div id="accordionDesign" class="accordion">
             <!-- Các accordion item sẽ được thêm vào -->
@@ -104,6 +113,8 @@
           </div>
         </div>
       </div>
+
+
     </div>
 
     <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
@@ -140,11 +151,17 @@
       setFooter();
       setProjects()
 
+      // Gán sự kiện click cho liên kết download bằng jQuery
+      $("#downloadImages").on("click", function (event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định
+        downloadImages(); // Gọi hàm tải xuống
+      });
+
     });
   </script>
 
   <!-- <script src="main.js"></script> -->
-   <script src="projects.js"></script>
+  <script src="projects.js"></script>
 
   <script>
     const tooltipTriggerList = document.querySelectorAll(
