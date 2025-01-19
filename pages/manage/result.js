@@ -62,7 +62,9 @@ const insights = [
         "id": "20130356",
         "task": [
             { "title": "Sign in", "link": "../../components/logout.html" },
-            { "title": "Trang tổng quan Admin", "link": "" },
+            { "title": "Trang tổng quan Admin", "link": "../admin/dashboard.html" },
+            { "title": "Trang quản lý người dùng", "link": "../admin/users-manager.html" },
+            { "title": "Trang quản lý bài hát", "link": "../admin/songs.html" },
         ],
         "completion": 100,
         "contribution": 36.36
