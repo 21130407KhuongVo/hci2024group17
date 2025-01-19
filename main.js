@@ -16,8 +16,8 @@ async function setHeader(baseURL, selected) {
             <ul id="headerTabs" class="nav nav-pills mx-auto">
                 <li class="nav-item"><a href="${baseURL}index.html" id="nav_home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#" id="nav_about" class="nav-link disabled">About</a></li>
-                <li class="nav-item"><a href="${baseURL}group_diary.html" id="nav_group_diary" class="nav-link">Group diary</a></li>
-                <li class="nav-item"><a href="${baseURL}projects.html" id="nav_projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="${baseURL}groupDiary.html" id="nav_group_diary" class="nav-link">Group diary</a></li>
+                <li class="nav-item"><a href="${baseURL}project.html" id="nav_projects" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="${baseURL}style_guide.html" id="nav_style_guide" class="nav-link">Style guide</a></li>
                 <li class="nav-item"><a href="${baseURL}resutl.html" id="nav_result" class="nav-link">Result</a></li>
             </ul>

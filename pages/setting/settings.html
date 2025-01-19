@@ -112,13 +112,9 @@
         </div>
         <!-- End Navigation Bar-->
 
-        <div class="container-fluid mt-4 mb-5">
+        <div class="container-lg mt-4 mb-5">
             <div class="row">
-                <div id="content-left" class="col-md-2 border-end border-2">
-                    <div id="your_library" class="h-100"></div>
-                </div>
-                <div id="content-midle" class="col-md-10">
-
+                <div id="content-midle" class="col">
                     <div class="container">
                         <h2 class="text-start mb-3">Settings</h2>
                     </div>
@@ -140,21 +136,17 @@
                 window.location.href = "SignIn.html";
             }
 
-            const baseURL = getBaseURL()
-            console.log(`My url: ${baseURL}`)
-
             // load header and footer
-            setHeader(baseURL, "/")
+            setHeader()
             setFooter();
 
             // load your library
-            loadYourLibrary(baseURL)
+            // loadYourLibrary(baseURL)
 
             // load settings
             renderSettingLayout()
         })
     </script>
-    <script src="main.js"></script>
     <script src="settings.js"></script>
 </body>
 

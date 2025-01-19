@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Hàm tự động đăng xuất
+        function logout() {
+            // Xóa trạng thái đăng nhập từ localStorage
+            localStorage.removeItem("loggedIn");
+
+            // Điều hướng người dùng về trang đăng nhập
+            window.location.href = "../pages/SignIn.html";
+        }
+
+        // Gọi hàm logout khi trang được tải
+        window.onload = logout;
+    </script>
+</head>
+<body>
+    <h1>Logging out...</h1>
+    <p>Redirecting to sign in page...</p>
+</body>
+</html>

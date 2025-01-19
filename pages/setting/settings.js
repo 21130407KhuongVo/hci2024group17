@@ -92,3 +92,14 @@ function renderSettingLayout() {
     parent.append(renderToggle('','See what your friends are playing'))
     // bla..bla..
 }
+
+async function setHeader() {
+    $('#navigation').load('../../components/header.html', function () {
+        const selected = ""
+        setHeader(selected)
+    })
+}
+
+async function setFooter() {
+    $('footer').load('../../components/footer.html')
+}

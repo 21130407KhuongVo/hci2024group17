@@ -26,7 +26,7 @@ $(document).ready(function () {
         song = songs[index];
 
         // Update song details in the media bar
-        $('#poster_master_play').attr('src', '../images/Covers/' + song.cover_image);
+        $('#poster_master_play').attr('src', '../../assets/images/covers/' + song.cover_image);
         $('#title').html(`${song.title}<br><div id="artist" class="subtitle">${song.artist}</div>`);
 
         // Set audio source and load the audio
