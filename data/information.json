@@ -205,7 +205,7 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./homepage.png",
+      "design_src": ["./homepage.png"],
       "implement_src": "../homepage/home.html"
     },
     {
@@ -216,7 +216,7 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./group_diary.png",
+      "design_src": ["./group_diary.png"],
       "implement_src": "../manage/groupDiary.html"
     },
     {
@@ -227,7 +227,7 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./projects_1.png",
+      "design_src": ["./projects_1.png"],
       "implement_src": "../manage/project.html"
     },
     {
@@ -238,7 +238,7 @@
       "implementer": "20130356",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./sign_in.png",
+      "design_src": ["./sign_in.png"],
       "implement_src": "../SignIn.html"
     },
     {
@@ -249,7 +249,7 @@
       "implementer": "21130459",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./register.png",
+      "design_src": ["./register.png"],
       "implement_src": "../register.html"
     },
     {
@@ -260,7 +260,7 @@
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hoàn thành",
-      "design_src": "./homepage_update.png",
+      "design_src": ["./homepage_update.png"],
       "implement_src": "../homepage/home.html"
     },
     {
@@ -271,7 +271,7 @@
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hoàn thành",
-      "design_src": "./setting.png",
+      "design_src": ["./setting.png"],
       "implement_src": "../setting/settings.html"
     },
     {
@@ -282,7 +282,7 @@
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hủy bỏ",
-      "design_src": "./your_library.png",
+      "design_src": ["./your_library.png"],
       "implement_src": ""
     },
     {
@@ -293,7 +293,7 @@
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hủy bỏ",
-      "design_src": "./recomment_playlist.png",
+      "design_src": ["./recomment_playlist.png"],
       "implement_src": ""
     },
     {
@@ -304,7 +304,7 @@
       "implementer": "21130572",
       "estimated_time": "27/11/2024 - 29/12/2024",
       "status": "Đang hoàn thiện",
-      "design_src": "./now-playing-bar.png",
+      "design_src": ["./now-playing-bar.png"],
       "implement_src": "./index.html"
     },
     {
@@ -315,7 +315,7 @@
       "implementer": "21130572",
       "estimated_time": "30/11/2024 - 3/01/2025",
       "status": "Đang hoàn thiện",
-      "design_src": "./playlist-page.png",
+      "design_src": ["./playlist-page.png"],
       "implement_src": "../playlist-page/playlist-page.html"
     },
     {
@@ -326,7 +326,7 @@
       "implementer": "21130407",
       "estimated_time": "15/01/2024 - 16/01/2025",
       "status": "Hoàn thành",
-      "design_src": "./style_guide.png",
+      "design_src": ["./style_guide.png"],
       "implement_src": "../style_guide/style_guide.html"
     },
     {
@@ -337,7 +337,7 @@
       "implementer": "21130407",
       "estimated_time": "15/01/2025 - 16/01/2025",
       "status": "Hoàn thành",
-      "design_src": "./result.png",
+      "design_src": ["./result.png"],
       "implement_src": "../manage/result.html"
     }
   ],

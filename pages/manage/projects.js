@@ -103,21 +103,23 @@ function setRequirements(requirements, users) {
 function loadDesignTab(requirements) {
     let accordionHTML = "";
     requirements.forEach((requirement) => {
-        if (requirement.design_src) {
+        if (requirement.design_src && Array.isArray(requirement.design_src)) {
             accordionHTML += `
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="heading${requirement.id_requirement}">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${requirement.id_requirement}" aria-expanded="true" aria-controls="collapse${requirement.id_requirement}">
-                                        ${requirement.function}
-                                    </button>
-                                </h2>
-                                <div id="collapse${requirement.id_requirement}" class="accordion-collapse collapse" data-bs-parent="#accordionDesign">
-                                    <div class="accordion-body">
-                                        <img src="../../assets/images/requirements/${requirement.design_src}" alt="${requirement.function} Design" loading="lazy" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        `;
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading${requirement.id_requirement}">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${requirement.id_requirement}" aria-expanded="true" aria-controls="collapse${requirement.id_requirement}">
+                            ${requirement.function}
+                        </button>
+                    </h2>
+                    <div id="collapse${requirement.id_requirement}" class="accordion-collapse collapse" data-bs-parent="#accordionDesign">
+                        <div class="accordion-body">
+                            ${requirement.design_src.map(src => `
+                                <img src="../../assets/images/requirements/${src}" alt="${requirement.function} Design" loading="lazy" class="img-fluid">
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
         }
     });
     $("#accordionDesign").html(accordionHTML);
