@@ -64,7 +64,7 @@ function loadImplementationTab(requirements) {
                   class="btn btn-link" 
                   data-bs-toggle="modal" 
                   data-bs-target="#codeModal" 
-                  onclick="loadCodeForModal('${requirement.implement_src}')">
+                  onclick="loadCodeForModal('${requirement.implement_src}', '${requirement.function}')">
                   ${requirement.function} - Show Code
                 </button>
               </div>
@@ -137,7 +137,7 @@ function getUserFullname(studentId, users) {
     return user ? user.fullname : "(anyone)"; // Trả về fullname nếu tìm thấy, ngược lại trả về 'Không có tên'
 }
 
-window.loadCodeForModal = function (src) {
+window.loadCodeForModal = function (src, functionName) {
     $.get(src)
         .done(function (data) {
             // Chuyển đổi data thành chuỗi nếu cần
@@ -154,6 +154,9 @@ window.loadCodeForModal = function (src) {
             // Hiển thị nội dung
             $("#modalCodeContent").html(`<pre>${escapedContent}</pre>`);
             console.log("File đã được tải thành công:", src);
+
+            // Cập nhật đường dẫn cho nút "Go to View"
+            $("#goToViewButton").attr("href", src); // Cập nhật href cho nút "Go to View"
         })
         .fail(function () {
             $("#modalCodeContent").text("Failed to load the file.");
