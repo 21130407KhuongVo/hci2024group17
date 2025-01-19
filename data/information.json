@@ -339,6 +339,17 @@
       "status": "Hoàn thành",
       "design_src": ["./result.png"],
       "implement_src": "../manage/result.html"
+    },
+    {
+      "id_requirement": 14,
+      "function": "Tạo trang \"Notification\"",
+      "proposer": "21130407",
+      "designer": "23130348",
+      "implementer": "23130348",
+      "estimated_time": "15/01/2025 - 19/01/2025",
+      "status": "Hoàn thành",
+      "design_src": ["./notification.png"],
+      "implement_src": "../notification/notification.html"
     }
   ],
   "medias": [
