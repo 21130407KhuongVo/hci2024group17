@@ -22,7 +22,7 @@ const insights = [
             { "title": "Result", "link": "../manage/result.html" }
         ],
         "completion": 100,
-        "contribution": "?"
+        "contribution": 54.55
     },
     {
         "id": "21130425",
@@ -38,8 +38,8 @@ const insights = [
             { "title": "Register ", "link": "" },
             { "title": "Trang quản lý người dùng", "link": "" }
         ],
-        "completion": 100,
-        "contribution": "?"
+        "completion": 50,
+        "contribution": 0
     },
     {
         "id": "21130572",
@@ -48,15 +48,15 @@ const insights = [
             { "title": "Trang chi tiết bài hát", "link": "" }
         ],
         "completion": 100,
-        "contribution": "?"
+        "contribution": 18.18
     },
     {
         "id": "23130348",
         "task": [
-            { "title": "Trang quản lý category ", "link": "" },
+            {"title": "Notification", "link":"../notification/notification.html"}
         ],
         "completion": 100,
-        "contribution": "?"
+        "contribution": 9.1
     },
     {
         "id": "20130356",
@@ -65,7 +65,7 @@ const insights = [
             { "title": "Trang tổng quan Admin", "link": "" },
         ],
         "completion": 100,
-        "contribution": "?"
+        "contribution": 36.36
     },
 ]
 

@@ -1,0 +1,198 @@
+.notifi {
+    margin-top: 64px;
+}
+
+.text_title h1 {
+    font-size: xx-large;
+}
+
+.text_body p {
+    font-size: smaller;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.button button {
+    background-color: transparent;
+    border: none;
+    font-size: small;
+}
+
+.aa {
+    box-sizing: border-box;
+    border-radius: 9999px;
+    display: inline-flex;
+    min-inline-size: 0px;
+    min-block-size: var(--encore-control-size-smaller, 32px);
+    align-items: center;
+    padding-inline: var(--encore-spacing-tighter, 12px);
+    background-color: var(--background-tinted-base, rgba(0, 0, 0, 0.08));
+}
+
+/* content css */
+.content_cover {
+    height: 500px;
+    overflow: auto;
+}
+
+
+.content {
+    margin-bottom: 256px;
+    max-width: 760px;
+}
+
+.song_odd {
+    display: flex;
+}
+
+.song_even {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_cover {
+    margin: 0 16px;
+    height: 140px;
+    width: 140px;
+}
+
+.bp_img {
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
+
+.text_content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.text_content_even {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.artist {
+    font-size: medium;
+}
+
+.info {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.option_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ob button {
+    background-color: transparent;
+    border: none;
+}
+
+/* footer css */
+
+.footer_topSection {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.topLinks {
+    display: flex;
+}
+
+.st {
+    margin-right: 24px;
+    margin-bottom: 32px;
+    width: 20%;
+}
+
+.sl {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.links {
+    margin: 8px 0;
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.communities {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.useful_links {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.spotify_plans {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.socialLinks {
+    margin-right: 16px;
+    gap: 20px;
+    display: flex;
+}
+
+.icon a {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-flex
+;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    /* background-color: rgba(112, 106, 106, 0.82); */
+    background-color: var(--background-tinted-base, rgba(0, 0, 0, 0.08));
+}
+
+.footer_bottomSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 16px;
+}
+
+.links_bot {
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+
+.countryCopyright {
+    margin-right: 16px;
+    font-size: small;
+}
