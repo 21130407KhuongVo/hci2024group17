@@ -1,0 +1,31 @@
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.container {
+    padding-top: 2rem;
+}
+
+.show-all {
+    text-align: right;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}

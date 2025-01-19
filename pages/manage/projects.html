@@ -22,26 +22,6 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-  <script>
-    // Hàm để tải nội dung code vào Modal
-    function loadCodeForModal(src) {
-      // Sử dụng jQuery để tải file HTML từ src và hiển thị trong Modal
-      $.get(src)
-        .done(function (data) {
-          // Hiển thị nội dung file vào Modal
-          $("#modalCodeContent").text(data);
-
-          // Thông báo đã tải thành công
-          console.log("File đã được tải thành công");
-        })
-        .fail(function () {
-          // Thông báo nếu tải thất bại
-          $("#modalCodeContent").text("Failed to load the file.");
-          console.log("Lỗi khi tải file");
-        });
-    }
-  </script>
 </head>
 
 <body>
@@ -155,11 +135,10 @@
         // Nếu chưa đăng nhập, điều hướng tới trang đăng nhập
         window.location.href = "SignIn.html";
       }
+      setHeader(getBaseURL(), "nav_projects");
+      setFooter();
 
       $.getJSON("information.json", function (data) {
-        setHeader();
-        setFooter();
-
         const users = data.users;
         const requirements = data.requirements;
 
@@ -203,21 +182,24 @@
       function loadImplementationTab(requirements) {
         let implementationLinksHTML = "";
 
+        // Duyệt qua các yêu cầu để tạo danh sách button
         requirements.forEach((requirement) => {
           if (requirement.implement_src) {
-            // Thay vì mở link, chỉ cần hiển thị Modal
             implementationLinksHTML += `
-                            <div class="mb-3">
-                                <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#codeModal" 
-                                    onclick="loadCodeForModal('${requirement.implement_src}')">
-                                    ${requirement.function} - Show Code
-                                </button>
-                            </div>
-                        `;
+              <div class="mb-3">
+                <button 
+                  class="btn btn-link" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#codeModal" 
+                  onclick="loadCodeForModal('${requirement.implement_src}')">
+                  ${requirement.function} - Show Code
+                </button>
+              </div>
+            `;
           }
         });
 
-        // Cập nhật nội dung cho tab Implementation
+        // Gắn danh sách button vào phần tử #implementationContent
         $("#implementationContent").html(implementationLinksHTML);
       }
 
@@ -274,15 +256,34 @@
         return user ? user.fullname : "(anyone)"; // Trả về fullname nếu tìm thấy, ngược lại trả về 'Không có tên'
       }
 
-      function setHeader() {
-        $("#navigation").load("header.html");
-      }
+      window.loadCodeForModal = function (src) {
+        $.get(src)
+          .done(function (data) {
+            // Chuyển đổi data thành chuỗi nếu cần
+            const stringData = typeof data === "string" ? data : new XMLSerializer().serializeToString(data);
 
-      function setFooter() {
-        $("#footer").load("footer.html");
-      }
+            // Escape nội dung HTML
+            const escapedContent = stringData
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;")
+              .replace(/'/g, "&#039;");
+
+            // Hiển thị nội dung
+            $("#modalCodeContent").html(`<pre>${escapedContent}</pre>`);
+            console.log("File đã được tải thành công:", src);
+          })
+          .fail(function () {
+            $("#modalCodeContent").text("Failed to load the file.");
+            console.log("Lỗi khi tải file:", src);
+          });
+      };
+
     });
   </script>
+
+  <script src="main.js"></script>
 
   <script>
     const tooltipTriggerList = document.querySelectorAll(
