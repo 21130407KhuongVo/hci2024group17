@@ -85,13 +85,50 @@
 
                 <h2>Responsive Design</h2>
                 <p>Ensure all components are responsive by using Bootstrap's grid system and utility classes.</p>
+
+                <h2>Project Directory Structure</h2>
+                <p>The following is the directory structure of our project, which is organized to facilitate easy navigation and maintainability:</p>
+                <pre>
+<code>
+.
+├── assets
+│   ├── images          # Contains all image assets used in the project
+│   │   ├── covers      # Cover images for playlists or albums
+│   │   ├── members     # Profile images of team members
+│   │   ├── nlu         # Logos and branding for NLU
+│   │   └── requirements # Screenshots and design requirements
+│   ├── medias          # Audio files for the application
+│   └── styles          # CSS files for styling the application
+├── components          # Reusable HTML components
+│   ├── footer.html     # Footer component
+│   ├── header.html     # Header component
+│   └── sidebar.html    # Sidebar component
+├── data                # JSON data files
+│   └── information.json # Contains information used in the application
+├── index.html          # Main entry point of the application
+├── main.js             # Main JavaScript file for application logic
+├── pages               # Contains different pages of the application
+│   ├── SignIn.html      # Sign In page
+│   └── style_guide      # Style guide page
+│       ├── style_guide.html # HTML for Style Guide
+│       └── style_guide.js   # JavaScript for Style Guide
+└── README.md            # Project documentation
+</code>
+                </pre>
+                <p>This structure helps in organizing the project efficiently, making it easier for team members to locate files and understand the project layout.</p>
             </div>
         </div>
     </div>
 
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+        <div id="footer"></div>
+    </footer>
+    <!-- End Footer -->
+
     <script>
         $(document).ready(function(){
             setHeader()
+            setFooter()
         })
     </script>
 

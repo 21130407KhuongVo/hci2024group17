@@ -5,3 +5,7 @@ async function setHeader(loading) {
     })
     return loading
 }
+
+async function setFooter() {
+    $('footer').load('../../components/footer.html')
+}

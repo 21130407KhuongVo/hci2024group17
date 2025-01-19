@@ -13,7 +13,7 @@
       "email": "21130407@st.hcmuaf.edu.vn",
       "password": "21052003",
       "createAt": "2024-09-21",
-      "context": "developer",
+      "context": "Team leader, developer",
       "group_diary": [
         {
           "description": "Tạo repository, deploy github page",
@@ -38,6 +38,10 @@
         {
           "description": "Bổ sung source các file media, chỉnh sửa, bổ sung thêm các field trong file json",
           "assessment": 100
+        },
+        {
+          "description": "Tái cấu trúc project theo chuẩn react. Tạo trang \"About us\", cập nhật lại giao diện trang \"Homepage\".",
+          "assessment": "100"
         }
       ]
     },
@@ -54,7 +58,19 @@
       "email": "",
       "password": "",
       "createAt": "",
-      "context": "developer"
+      "context": "Developer",
+      "group_diary": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {
+          "description": "Trang quản lý bài hát",
+          "assessment": 0
+        }
+      ]
     },
     {
       "id": 21130459,
@@ -69,7 +85,7 @@
       "email": "21130459@st.hcmuaf.edu.vn",
       "password": "21130459",
       "createAt": "",
-      "context": "developer",
+      "context": "Developer",
       "group_diary": [
         {
           "description": "",
@@ -78,6 +94,14 @@
         {
           "description": "Tạo trang Register",
           "assessment": 100
+        },
+        {},
+        {},
+        {},
+        {},
+        {
+          "description": "Trang quản lý người dùng",
+          "assessment": 0
         }
       ]
     },
@@ -94,7 +118,22 @@
       "email": "",
       "password": "",
       "createAt": "",
-      "context": "developer"
+      "context": "Developer",
+      "group_diary": [
+        {},
+        {},
+        {},
+        {},
+        {
+          "description": "Trang \"Playlist page\"",
+          "assessment": 0
+        },
+        {},
+        {
+          "description": "Trang chi tiết bài hát",
+          "assessment": 0
+        }
+      ]
     },
     {
       "id": 23130348,
@@ -109,7 +148,19 @@
       "email": "",
       "password": "",
       "createAt": "",
-      "context": "developer"
+      "context": "Developer",
+      "group_diary": [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {
+          "description": "Trang quản lý category",
+          "assessment": 0
+        }
+      ]
     },
     {
       "id": 20130356,
@@ -124,7 +175,7 @@
       "email": "qinhuuuuu@gmail.com",
       "password": "",
       "createAt": "",
-      "context": "developer",
+      "context": "Developer",
       "group_diary": [
         {
           "description": "",
@@ -133,6 +184,14 @@
         {
           "description": "Tạo trang sign in",
           "assessment": 100
+        },
+        {},
+        {},
+        {},
+        {},
+        {
+          "description": "Trang tổng quan admin",
+          "assessment": 0
         }
       ]
     }
@@ -146,8 +205,8 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./homepage.png",
-      "implement_src": "./index.html"
+      "design_src": ["./homepage.png"],
+      "implement_src": "../homepage/home.html"
     },
     {
       "id_requirement": 2,
@@ -157,8 +216,8 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./group_diary.png",
-      "implement_src": "./group_diary.html"
+      "design_src": ["./group_diary.png"],
+      "implement_src": "../manage/groupDiary.html"
     },
     {
       "id_requirement": 3,
@@ -168,8 +227,8 @@
       "implementer": "21130407",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./projects_1.png",
-      "implement_src": "./projects.html"
+      "design_src": ["./projects_1.png"],
+      "implement_src": "../manage/project.html"
     },
     {
       "id_requirement": 4,
@@ -179,8 +238,8 @@
       "implementer": "20130356",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./sign_in.png",
-      "implement_src": "./SignIn.html"
+      "design_src": ["./sign_in.png"],
+      "implement_src": "../SignIn.html"
     },
     {
       "id_requirement": 5,
@@ -190,8 +249,8 @@
       "implementer": "21130459",
       "estimated_time": "15/11/2024 - 15/11/2024",
       "status": "Hoàn thành",
-      "design_src": "./register.png",
-      "implement_src": "./register.html"
+      "design_src": ["./register.png"],
+      "implement_src": "../register.html"
     },
     {
       "id_requirement": 6,
@@ -201,8 +260,8 @@
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hoàn thành",
-      "design_src": "./homepage_update.png",
-      "implement_src": "./index.html"
+      "design_src": ["./homepage_update.png"],
+      "implement_src": "../homepage/home.html"
     },
     {
       "id_requirement": 7,
@@ -212,8 +271,8 @@
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
       "status": "Hoàn thành",
-      "design_src": "./setting.png",
-      "implement_src": "./settings.html"
+      "design_src": ["./setting.png"],
+      "implement_src": "../setting/settings.html"
     },
     {
       "id_requirement": 8,
@@ -222,9 +281,9 @@
       "designer": "21130407",
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
-      "status": "Hoàn thành",
-      "design_src": "./your_library.png",
-      "implement_src": "./homepage/your_library.html"
+      "status": "Hủy bỏ",
+      "design_src": ["./your_library.png"],
+      "implement_src": ""
     },
     {
       "id_requirement": 9,
@@ -233,9 +292,9 @@
       "designer": "21130407",
       "implementer": "21130407",
       "estimated_time": "23/11/2024 - 06/12/2024",
-      "status": "Hoàn thành",
-      "design_src": "./recomment_playlist.png",
-      "implement_src": "./homepage/recomment_playlist.html"
+      "status": "Hủy bỏ",
+      "design_src": ["./recomment_playlist.png"],
+      "implement_src": ""
     },
     {
       "id_requirement": 10,
@@ -244,8 +303,8 @@
       "designer": "21130572",
       "implementer": "21130572",
       "estimated_time": "27/11/2024 - 29/12/2024",
-      "status": "Hoàn thành",
-      "design_src": "./now-playing-bar.png",
+      "status": "Đang hoàn thiện",
+      "design_src": ["./now-playing-bar.png"],
       "implement_src": "./index.html"
     },
     {
@@ -254,10 +313,32 @@
       "proposer": "21130407",
       "designer": "21130572",
       "implementer": "21130572",
-      "estimated_time": "30/11/2024 - 3/1/2024",
+      "estimated_time": "30/11/2024 - 3/01/2025",
+      "status": "Đang hoàn thiện",
+      "design_src": ["./playlist-page.png"],
+      "implement_src": "../playlist-page/playlist-page.html"
+    },
+    {
+      "id_requirement": 12,
+      "function": "Tạo trang \"Style guide\"",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/01/2024 - 16/01/2025",
       "status": "Hoàn thành",
-      "design_src": "./playlist-page.png",
-      "implement_src": "./playlist-page.html"
+      "design_src": ["./style_guide.png"],
+      "implement_src": "../style_guide/style_guide.html"
+    },
+    {
+      "id_requirement": 13,
+      "function": "Tạo trang \"Result\"",
+      "proposer": "21130407",
+      "designer": "21130407",
+      "implementer": "21130407",
+      "estimated_time": "15/01/2025 - 16/01/2025",
+      "status": "Hoàn thành",
+      "design_src": ["./result.png"],
+      "implement_src": "../manage/result.html"
     }
   ],
   "medias": [

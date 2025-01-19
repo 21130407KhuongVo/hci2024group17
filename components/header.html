@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header Component</title>
 </head>
+
 <body>
     <div id="navigation"></div>
 
     <script>
         async function setHeader(selected) {
             // Lấy baseURL từ window.location.origin
-            const baseURL = window.location.origin + '/'; // Đảm bảo đường dẫn luôn tính từ thư mục gốc
+            const pathSegments = window.location.pathname.split('/'); // Split the path into segments
+            const baseURL = pathSegments.slice(0, pathSegments.length - 1).join('/');
 
             // Tạo nội dung HTML cho header
             const header = `
                 <header class="d-flex justify-content-between align-items-center py-3">
                     <div class="w-25">
                         <a href="${baseURL}index.html" class="d-flex align-items-center">
-                            <img src="${baseURL}assets/images/nlu/FIT_logo.png" alt="Logo" width="50">
+                            <img src="../../assets/images/nlu/FIT_logo.png" alt="Logo" width="50">
                         </a>
                     </div>
 
                     <ul id="headerTabs" class="nav nav-pills mx-auto">
-                        <li class="nav-item"><a href="${baseURL}index.html" id="nav_home" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" id="nav_about" class="nav-link disabled">About</a></li>
-                        <li class="nav-item"><a href="${baseURL}pages/manage/group_diary.html" id="nav_group_diary" class="nav-link">Group diary</a></li>
-                        <li class="nav-item"><a href="${baseURL}pages/manage/projects.html" id="nav_projects" class="nav-link">Projects</a></li>
-                        <li class="nav-item"><a href="${baseURL}pages/style_guide/style_guide.html" id="nav_style_guide" class="nav-link">Style guide</a></li>
-                        <li class="nav-item"><a href="${baseURL}pages/manage/result.html" id="nav_result" class="nav-link">Result</a></li>
+                        <li class="nav-item"><a href="../../index.html" id="nav_home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="../../pages/about_us/about.html" id="nav_about" class="nav-link">About us</a></li>
+                        <li class="nav-item"><a href="../../pages/manage/groupDiary.html" id="nav_group_diary" class="nav-link">Group diary</a></li>
+                        <li class="nav-item"><a href="../../pages/manage/project.html" id="nav_projects" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="../../pages/style_guide/style_guide.html" id="nav_style_guide" class="nav-link">Style guide</a></li>
+                        <li class="nav-item"><a href="../../pages/manage/result.html" id="nav_result" class="nav-link">Result</a></li>
                     </ul>
 
                     <div class="d-flex align-items-center justify-content-between w-25">
@@ -49,17 +52,17 @@
                         <div class="dropdown">
                             <button type="button" class="btn rounded-circle border overflow-hidden dropdown-toggle"
                                 data-bs-toggle="dropdown" aria-expanded="false" style="width: 40px; height: 40px; padding: 0;">
-                                <img class="img-fluid rounded-circle" src="${baseURL}assets/images/members/NhatKhuong.jpg" alt="my avatar"
+                                <img class="img-fluid rounded-circle" src="../../assets/images/members/NhatKhuong.jpg" alt="my avatar"
                                     style="width: 100%; height: 100%; object-fit: cover;">
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Account</a></li>
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li><a id="settings" href="${baseURL}settings.html" class="dropdown-item">Settings</a></li>
+                                <li><a id="settings" href="../../pages/setting/settings.html" class="dropdown-item">Settings</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                                <li><a class="dropdown-item text-danger" href="../../components/logout.html">Log out</a></li>
                             </ul>
                         </div>
                     </div>
