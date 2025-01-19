@@ -140,18 +140,22 @@
                 window.location.href = "SignIn.html";
             }
 
+            const baseURL = getBaseURL()
+            console.log(`My url: ${baseURL}`)
+
             // load header and footer
-            setHeader();
+            setHeader(baseURL, "/")
             setFooter();
 
             // load your library
-            loadYourLibrary()
+            loadYourLibrary(baseURL)
 
             // load settings
             renderSettingLayout()
         })
     </script>
-    <script src="./settings.js"></script>
+    <script src="main.js"></script>
+    <script src="settings.js"></script>
 </body>
 
 </html>

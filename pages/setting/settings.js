@@ -1,13 +1,5 @@
-function setHeader() {
-    $("#navigation").load("../header.html");
-}
-
-function setFooter() {
-    $("#footer").load("../footer.html");
-}
-
-function loadYourLibrary() {
-    $('#your_library').load('../homepage/your_library.html')
+function loadYourLibrary(baseURL) {
+    $('#your_library').load(`${baseURL}homepage/your_library.html`)
 }
 
 function renderSelect(title, subTitle, options) {
