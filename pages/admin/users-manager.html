@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Người Dùng</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .sidebar {
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #343a40;
+        color: white;
+        padding-top: 20px;
+      }
+      .sidebar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+      }
+      .sidebar a:hover {
+        background-color: #495057;
+        border-radius: 5px;
+      }
+      .sidebar a.active {
+        background-color: #007bff;
+        border-radius: 5px;
+      }
+      .content {
+        margin-left: 220px;
+        padding: 20px;
+      }
+      .table {
+        background-color: white;
+      }
+      .btn-edit {
+        background-color: #007bff;
+        color: white;
+      }
+      .btn-delete {
+        background-color: #dc3545;
+        color: white;
+      }
+      .btn-edit:hover,
+      .btn-delete:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h3 class="text-center">Trang Quản Trị</h3>
+      <a href="dashboard.html" class="nav-link">Bảng Điều Khiển</a>
+      <a href="users-manager.html" class="nav-link active"
+        >Quản Lý Người Dùng</a
+      >
+      <a href="songs.html" class="nav-link">Quản Lý Bài Hát</a>
+      <a href="albums.html" class="nav-link">Quản Lý Album</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h1>Quản Lý Người Dùng</h1>
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Tên Người Dùng</th>
+            <th>Email</th>
+            <th>Vai Trò</th>
+            <th>Ngày Tạo</th>
+            <th>Hành Động</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- Nội dung sẽ được thêm qua JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      // Load dữ liệu người dùng từ file JSON
+      fetch("../../data/information.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const users = data.users;
+          const tableBody = document.getElementById("userTableBody");
+
+          // Tạo hàng cho từng người dùng
+          users.forEach((user) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${user.id}</td>
+              <td>${user.fullname || "N/A"}</td>
+              <td>${user.email || "N/A"}</td>
+              <td>${user.role || "N/A"}</td>
+              <td>${user.createAt || "N/A"}</td>
+              <td>
+                <button class="btn btn-sm btn-edit" onclick="editUser(${
+                  user.id
+                })">Chỉnh Sửa</button>
+                <button class="btn btn-sm btn-delete" onclick="deleteUser(${
+                  user.id
+                })">Xóa</button>
+              </td>
+            `;
+            tableBody.appendChild(row);
+          });
+        })
+        .catch((err) => console.error("Error loading user data:", err));
+
+      // Chức năng chỉnh sửa
+      function editUser(userId) {
+        alert(`Chỉnh sửa người dùng với ID: ${userId}`);
+        // Thêm logic chỉnh sửa ở đây
+      }
+
+      // Chức năng xóa
+      function deleteUser(userId) {
+        if (
+          confirm(`Bạn có chắc chắn muốn xóa người dùng với ID: ${userId}?`)
+        ) {
+          alert(`Người dùng với ID ${userId} đã được xóa.`);
+          // Thêm logic xóa ở đây
+        }
+      }
+    </script>
+  </body>
+</html>

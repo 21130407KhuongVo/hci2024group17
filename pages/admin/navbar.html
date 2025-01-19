@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h3 class="text-center">Admin</h3>
+      <a href="dashboard.html" class="nav-link" id="nav-dashboard"
+        >Bảng điều khiển</a
+      >
+      <a href="users-manager.html" class="nav-link" id="nav-users"
+        >Quản lí người dùng</a
+      >
+      <a href="songs.html" class="nav-link" id="nav-songs">Quản lí bài hát</a>
+      <a href="albums.html" class="nav-link" id="nav-albums">Xu hướng</a>
+    </div>
+
+    <style>
+      .sidebar {
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #343a40;
+        color: white;
+        padding-top: 20px;
+      }
+      .sidebar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+      }
+      .sidebar a:hover {
+        background-color: #495057;
+        border-radius: 5px;
+      }
+      .sidebar a.active {
+        background-color: #007bff;
+        border-radius: 5px;
+      }
+    </style>
+  </body>
+</html>
